@@ -7,7 +7,7 @@ www: egouldo.github.io
 email: "elise.gould@unimelb.edu.au"
 twitter: EliseGould
 github: egouldo
-aboutme: "In Progress"
+aboutme: "Elise Gould is a PhD student at the School of BioSciences, The University of Melbourne. Their PhD is investigating the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. Elise’s primary research interest is in building ecological models for aiding ecological management and conservation decisions. Other research interests include decision-theory, Structured Decision Making, plant ecology (especially grasslands of the Victorian Volcanic Plains), data visualisation and building new tools for open-science."
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
 ---
@@ -22,14 +22,14 @@ library(vitae)
 
 ```{r}
 tribble(
-  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-    "Doctor of Philosophy, Science", "University of Melbourne", "Parkville, Australia", "November 2017 - October 2022 (expected)", "Thesis Title: Reproducibility and Transparency of Decisions in Ecology and Conservation",
-    "Master of Science (Botany)", "University of Melbourne", "Parkville, Australia", "Mar. 2012 - December 2015", "Research Training Degree, with 65% original research. First Class Honours thesis",
-  "Master of Science (Botany)", "University of Melbourne", "Parkville, Australia", "Mar. 2012 - December 2015", "Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites",
-    "Bachelor of Science, Major in Ecology", "University of Melbourne", "Parkville, Australia", "Mar. 2005 - Nov. 2011", "First Class Honours Average",
-  "Bachelor of Arts, Major in Indonesian", "University of Melbourne", "Parkville, Australia", "Mar. 2005 - Nov. 2011", "First Class Honours Average"
+  ~ degree, ~ uni, ~ dates, ~ details,
+    "Doctor of Philosophy, Science", "University of Melbourne", "November 2017 - October 2022 (expected)", "Thesis Title: Reproducibility and Transparency of Decisions in Ecology and Conservation",
+    "Master of Science (Distinction)", "University of Melbourne", "Mar. 2012 - December 2015", "Research Training Degree, with 65% original research. Course Weighted Average Mark: 82.312",
+  "Master of Science (Distinction)", "University of Melbourne", "Mar. 2012 - December 2015", "Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites.",
+    "Bachelor of Science", "University of Melbourne", "Mar. 2005 - Nov. 2011", "Major in Ecology, First Class Honours Average",
+  "Bachelor of Arts", "University of Melbourne", "Mar. 2005 - Nov. 2011", "Major in Indonesian, First Class Honours Average"
 ) %>% 
-  detailed_entries(degree, dates, uni, loc, details)
+  detailed_entries(what = uni,when =  dates, with = degree,why =  details) 
 ```
 
 # Employment History
@@ -37,14 +37,14 @@ tribble(
 ```{r}
 tribble(
   ~ what, ~ when, ~ with, ~ where, ~why,
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Vegetation Management and Conservation , Semester 1, 2018",
+   "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities",
+    "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing",
+  "School of Geography", "August 2015 - January 2017", "Research Assistant", "University of Melbourne", "Modelling Drinking Water Availability in the Yangtze River Estuary with Bayesian Belief Networks",
+   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Vegetation Management and Conservation , Semester 1, 2018",
     "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Environmental Risk Assessment - EVSC30003: Semester 1 2016, 2017",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Applied Ecology - ECOL30005: Semester 2 2014, 2015",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Biology of Cells and Organisms - BIOL10004: Semester 1, 2012, 2013, 2014, 2015",
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Ecology - ECOL20003: Semester 2, 2014",
-  "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities",
-    "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "",
-  "School of Geography", "August 2015 - January 2017", "Research Assistant", "University of Melbourne", ""
+  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Ecology - ECOL20003: Semester 2, 2014"
 ) %>% 
   detailed_entries(what, when, with, where, why)
 ```
@@ -55,15 +55,34 @@ tribble(
 ```{r}
 tribble(~Award, ~Description, ~Organisation, ~Year,
         "Australian Government Research Training Program (RTP) Scholarship", "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne", "2017 - Current",
-        "G.A.M. Scott Research Award", "Supports a graduate research student, or an honours or equivalent student, in the discipline of botany, within the School of BioSciences undertaking research that involves field work in the areas of either bryophytes or plant ecology.", "School of Botany Foundation, The University of Melbourne", "2012",
+        "G.A.M. Scott Research Award", "Supports a graduate research student, or an honours or equivalent student, in the discipline of botany, within the School of BioSciences undertaking research that involves field work in the areas of eitTheir bryophytes or plant ecology.", "School of Botany Foundation, The University of Melbourne", "2012",
         "Muriel Ramm Science Bursary", "Awarded to a student entering honours or a postgraduate degree in the Faculty of Science. It goes to the candidate judged most likely to benefit academically from it, taking into account financial need or hardship.", "Faculty of Science, The University of Melbourne", "2012",
         "Graduate Access Bursary", "Awarded to graduate coursework students who have experienced difficult circumstances that impacted on their tertiary studies.", "Melbourne Scholarships, The University of Melbourne", "2012",
-        "Commonwealth Education Costs Scholarship", "Commonwealth Scholarships were established to increase higher education participation by students from low socio-economic backgrounds and from rural and regional areas.", "Commonwealth Government of Australia", "2006 - 2010"
+        "Commonwealth Education Costs Scholarship", "Commonwealth Scholarships were established to increase higTheir education participation by students from low socio-economic backgrounds and from rural and regional areas.", "Commonwealth Government of Australia", "2006 - 2010"
         ) %>% 
         detailed_entries(why = Description, when = Year, with = Award, what = Organisation)
 ```
 
 
-# Presentations and Talks
+# Selected Talks and Workshops
 
-* List my talks here
+```{r}
+tibble::tribble(
+  ~name, ~event, ~location, ~year,
+  "Choose your own adventure: Researcher degrees of freedom and Questionable Research Practices in ecological modelling for decision support", "Quantitative and Applied Ecology Group", "Melbourne, Australia", 2018, 
+  "Questionable Research Practices 
+in Non-Hypothesis 
+Testing Research", "Credibility Revolution 2018", "Melbourne, Australia", 2018,
+  "Beyond P-hacking: Questionable Research Practices in Non-Null Hypothesis Significance Testing", "UQ Open Science Conference", "Brisbane, Australia", 2018,
+"Questionable Research Practices in Ecology and Conservation", "Quantitative and Applied Ecology Group Annual Retreat", "Melbourne, Australia", 2018,
+"Workshop: 'Data Wrangling for Ecologists'", "Victorian Biodiversity Confernce", "Melbourne, Australia", 2017
+) %>% 
+  detailed_entries(
+    what = name,
+    when = year,
+    with = event,
+    where = location
+  )
+
+
+```

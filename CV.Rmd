@@ -37,11 +37,12 @@ tribble(
 ```{r}
 tribble(
   ~ what, ~ when, ~ with, ~ where, ~why,
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Vegetation Management and Conservation , Semester 1, 2018",
-    "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Environmental Risk Assessment - EVSC30003: Semester 1 2016, 2017",
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Applied Ecology - ECOL30005: Semester 2 2014, 2015",
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Biology of Cells and Organisms - BIOL10004: Semester 1, 2012, 2013, 2014, 2015",
-  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Ecology - ECOL20003: Semester 2, 2014",
+  "School of Historical and Philosophical Studies", "February 2019 - Present", "Quantitative Research Assistant - SCORE Programme", "University of Melbourne", "",
+  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Vegetation Management and Conservation ,  2018, Semester 2 2019",
+    "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Environmental Risk Assessment - EVSC30003: 2016, 2017",
+  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Applied Ecology - ECOL30005: 2014, 2015",
+  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Biology of Cells and Organisms - BIOL10004: 2012, 2013, 2014, 2015",
+  "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Ecology - ECOL20003: 2014",
   "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities",
     "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "",
   "School of Geography", "August 2015 - January 2017", "Research Assistant", "University of Melbourne", ""

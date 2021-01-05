@@ -1,13 +1,12 @@
 ---
-name: Elise Gould
+name: Elliot Gould
 position: "PhD Student, Research Assistant"
 address: "School of BioSciences, University of Melbourne"
 phone: 0406680382
 www: egouldo.github.io
 email: "elise.gould@unimelb.edu.au"
-twitter: EliseGould
 github: egouldo
-aboutme: "In Progress"
+aboutme: "Elliot Gould is a PhD student at the School of BioSciences, and a Quantitative Research Assistant on the [RepliCATS project](https://replicats.research.unimelb.edu.au/) at the School of Historical and Philosophical Sciences, at the University of Melbourne. Their PhD is investigating the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. In their role as a Quantitative Research Assistant, Elliot has managed a small team of researchers to develop a data provisioning platform for the RepliCATS project, and taken lead responsibility for data management, as well as contributing to research on metascience. They have an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Elliot has co-designed a learning and assessment module for the subject Vegetation Management and Conservation that aimed to teach recent developments in open-science practice whilst improving subject-specific learning outcomes. Elliot’s primary research interest is in building ecological models for aiding ecological management and conservation decisions. Other research interests include decision-theory, Structured Decision Making, plant ecology (especially grasslands of the Victorian Volcanic Plains), data visualisation and building new tools for open-science."
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
 ---
@@ -22,14 +21,14 @@ library(vitae)
 
 ```{r}
 tribble(
-  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-    "Doctor of Philosophy, Science", "University of Melbourne", "Parkville, Australia", "November 2017 - October 2022 (expected)", "Thesis Title: Reproducibility and Transparency of Decisions in Ecology and Conservation",
-    "Master of Science (Botany)", "University of Melbourne", "Parkville, Australia", "Mar. 2012 - December 2015", "Research Training Degree, with 65% original research. First Class Honours thesis",
-  "Master of Science (Botany)", "University of Melbourne", "Parkville, Australia", "Mar. 2012 - December 2015", "Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites",
-    "Bachelor of Science, Major in Ecology", "University of Melbourne", "Parkville, Australia", "Mar. 2005 - Nov. 2011", "First Class Honours Average",
-  "Bachelor of Arts, Major in Indonesian", "University of Melbourne", "Parkville, Australia", "Mar. 2005 - Nov. 2011", "First Class Honours Average"
+  ~ degree, ~ uni, ~ dates, ~ details,
+    "Doctor of Philosophy, Science", "University of Melbourne", "November 2017 - August 2023 (expected)", "Thesis Title: Reproducibility and Transparency of Decisions in Ecology and Conservation",
+    "Master of Science (Distinction)", "University of Melbourne", "Mar. 2012 - December 2015", "Research Training Degree, with 65% original research. Course Weighted Average Mark: 82.312",
+  "Master of Science (Distinction)", "University of Melbourne", "Mar. 2012 - December 2015", "Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites.",
+    "Bachelor of Science", "University of Melbourne", "Mar. 2005 - Nov. 2011", "Major in Ecology, First Class Honours Average",
+  "Bachelor of Arts", "University of Melbourne", "Mar. 2005 - Nov. 2011", "Major in Indonesian, First Class Honours Average"
 ) %>% 
-  detailed_entries(degree, dates, uni, loc, details)
+  detailed_entries(what = uni,when =  dates, with = degree,why =  details) 
 ```
 
 # Employment History
@@ -37,15 +36,15 @@ tribble(
 ```{r}
 tribble(
   ~ what, ~ when, ~ with, ~ where, ~why,
-  "School of Historical and Philosophical Studies", "February 2019 - Present", "Quantitative Research Assistant - SCORE Programme", "University of Melbourne", "",
+  "School of Historical and Philosophical Studies", "February 2019 - Present", "Quantitative Research Assistant - RepliCATS, SCORE Programme", "University of Melbourne", "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency  (DARPA) that aims to develop and deploy automated tools to assign 'confidence scores' to different Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. The RepliCATS project is one group within the SCORE project, based in Melbourne. The role also includes leading a small team within the RepliCATS project to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Vegetation Management and Conservation ,  2018, Semester 2 2019",
     "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Environmental Risk Assessment - EVSC30003: 2016, 2017",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Applied Ecology - ECOL30005: 2014, 2015",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Biology of Cells and Organisms - BIOL10004: 2012, 2013, 2014, 2015",
   "School of BioSciences", "February 2012 - December 2018", "Demonstrator", "University of Melbourne", "Ecology - ECOL20003: 2014",
-  "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities",
-    "School of BioSciences", "August 2015 - Present", "Research Assistant", "University of Melbourne", "",
-  "School of Geography", "August 2015 - January 2017", "Research Assistant", "University of Melbourne", ""
+   "School of BioSciences", "August 2015 - Present", "Casual Research Assistant", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities",
+    "School of BioSciences", "August 2015 - Present", " Casual Research Assistant", "University of Melbourne", "Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing",
+  "School of Geography", "August 2015 - January 2017", "Research Assistant", "University of Melbourne", "Modelling Drinking Water Availability in the Yangtze River Estuary with Bayesian Belief Networks",
 ) %>% 
   detailed_entries(what, when, with, where, why)
 ```
@@ -56,15 +55,57 @@ tribble(
 ```{r}
 tribble(~Award, ~Description, ~Organisation, ~Year,
         "Australian Government Research Training Program (RTP) Scholarship", "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne", "2017 - Current",
-        "G.A.M. Scott Research Award", "Supports a graduate research student, or an honours or equivalent student, in the discipline of botany, within the School of BioSciences undertaking research that involves field work in the areas of either bryophytes or plant ecology.", "School of Botany Foundation, The University of Melbourne", "2012",
+        "G.A.M. Scott Research Award", "Supports a graduate research student, or an honours or equivalent student, in the discipline of botany, within the School of BioSciences undertaking research that involves field work in the areas of eitTheir bryophytes or plant ecology.", "School of Botany Foundation, The University of Melbourne", "2012",
         "Muriel Ramm Science Bursary", "Awarded to a student entering honours or a postgraduate degree in the Faculty of Science. It goes to the candidate judged most likely to benefit academically from it, taking into account financial need or hardship.", "Faculty of Science, The University of Melbourne", "2012",
         "Graduate Access Bursary", "Awarded to graduate coursework students who have experienced difficult circumstances that impacted on their tertiary studies.", "Melbourne Scholarships, The University of Melbourne", "2012",
-        "Commonwealth Education Costs Scholarship", "Commonwealth Scholarships were established to increase higher education participation by students from low socio-economic backgrounds and from rural and regional areas.", "Commonwealth Government of Australia", "2006 - 2010"
+        "Commonwealth Education Costs Scholarship", "Commonwealth Scholarships were established to increase higTheir education participation by students from low socio-economic backgrounds and from rural and regional areas.", "Commonwealth Government of Australia", "2006 - 2010"
         ) %>% 
         detailed_entries(why = Description, when = Year, with = Award, what = Organisation)
 ```
 
 
-# Presentations and Talks
+# Talks and Workshops
 
-* List my talks here
+```{r}
+tibble::tribble(
+  ~name, ~event, ~location, ~year,
+  "Workshop: 'Preregistration Templates for Model-Based Research'", "Model Based Research and Reproducibility Workshop", "Centre for Open Science, Virgina, USA", 2020,
+  "Workshop: 'Preregistration Templates for Ecology and Conservation'", "Department of Land Water & Planning", "Melbourne", 2020,
+  "Workshop: 'Transparency & Reproducibility in Non-Hypothesis Testing Research'", "Society for the Improvement of Psychological Sciences", "Rotterdam", 2019,
+    "Poster Presentation: 'Questionable Research Practices in Non-Hypothesis Testing Research'", "MetaScience Symposium & Association for Interdisciplinary Meta-Research and Open Science Conference", "San Francisco & Melbourne", 2019,
+  "Talk: 'Choose your own adventure: Researcher degrees of freedom and Questionable Research Practices in ecological modelling for decision support'", "Quantitative and Applied Ecology Group", "Melbourne", 2018, 
+  "Talk: 'Questionable Research Practices in Non-Hypothesis Testing Research'", "Credibility Revolution 2018", "Melbourne", 2018,
+  "Talk 'Beyond P-hacking: Questionable Research Practices in Non-Null Hypothesis Significance Testing'", "UQ Open Science Conference", "Brisbane", 2018,
+"Talk 'Questionable Research Practices in Ecology and Conservation'", "Quantitative and Applied Ecology Group Annual Retreat", "Melbourne", 2018,
+"Workshop: 'Data Wrangling for Ecologists'", "Victorian Biodiversity Confernce", "Melbourne", 2017
+) %>% 
+  detailed_entries(
+    what = name,
+    when = year,
+    with = event,
+    where = location
+  )
+
+
+```
+
+# Research Consultancy
+
+```{r}
+tibble::tribble(
+  ~name, ~year, ~with, ~location, ~description,
+  "Testing and Developing preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia", "March 2020 - June 2020", "Department of Environment Land Water & Planning", "", "This research consultancy contributes to Elliot's PhD. This work involved the design and delivery of a collaborative workshop with DELWP in order to develop preregistration templates and methodology relevant to ecological modelling, in particular within decision-making and applied contexts."
+) %>% detailed_entries(
+  what = name,
+  when = year,
+  with = with,
+  where = location,
+  why = description
+)
+
+```
+
+
+
+
+

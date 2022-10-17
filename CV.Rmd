@@ -52,6 +52,7 @@ tribble(
 
 ```{r scholarships}
 tribble(~Award, ~Description, ~Organisation, ~Year,
+        "Research Excellence Award for Interdisciplinary Research", "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne", "2022",
         "Australian Government Research Training Program (RTP) Scholarship", "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne", "2017 - Current",
         "G.A.M. Scott Research Award", "Supports a graduate research student, or an honours or equivalent student, in the discipline of botany, within the School of BioSciences undertaking research that involves field work in the areas of either bryophytes or plant ecology.", "School of Botany Foundation, The University of Melbourne", "2012",
         "Muriel Ramm Science Bursary", "Awarded to a student entering honours or a postgraduate degree in the Faculty of Science. It goes to the candidate judged most likely to benefit academically from it, taking into account financial need or hardship.", "Faculty of Science, The University of Melbourne", "2012",

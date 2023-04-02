@@ -1,0 +1,130 @@
+---
+name: Elliot Gould
+position: "PhD Candidate, Research Assistant, Consultant"
+address: "School of Ecosystem and Forest Sciences, University of Melbourne"
+phone: 0406680382
+email: "elliot.gould@unimelb.edu.au"
+github: egouldo
+aboutme: "Elliot Gould is an Australian citizen and PhD candidate at the School of Ecosystem and Forest Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. In their role as a Quantitative Research Assistant, Elliot has managed a small team of researchers to develop a data provisioning platform for the repliCATS project, and taken lead responsibility for data management, as well as contributing to research on metascience. They have an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grasslands of the Victorian Volcanic Plains)."
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(vitae)
+```
+
+# Education
+
+```{r education}
+tribble(
+  ~ degree, ~ uni, ~ dates, ~ details,
+    "Doctor of Philosophy, Science", "University of Melbourne", "November 2017 - Present", "Thesis Title: Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science",
+    "Master of Science (Distinction)", "University of Melbourne", "March 2012 - December 2015", "Research Training Degree, with 70% original research and 30% coursework. Course Weighted Average Mark: 82.312",
+  "Master of Science (Distinction)", "University of Melbourne", "March 2012 - December 2015", "Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites.",
+    "Bachelor of Science", "University of Melbourne", "March 2005 - November 2011", "Major in Ecology, First Class Honours Average",
+  "Bachelor of Arts", "University of Melbourne", "March 2005 - November 2011", "Major in Indonesian, First Class Honours Average"
+) %>% 
+  detailed_entries(what = uni,when =  dates, with = degree,why =  details) 
+```
+
+# Employment History
+
+```{r employment}
+tribble(
+  ~ what, ~ when, ~ with, ~ where, ~why,
+  "School of Historical and Philosophical Studies, School of BioSciences", "February 2019 - Present", "Quantitative Research Assistant - repliCATS, SCORE Program", "University of Melbourne", "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency  (DARPA) that aims to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. The repliCATS project is one team within the SCORE project, based in Melbourne. In this role, Elliot lead a small team within the repliCATS project to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
+    "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Environmental Risk Assessment: 2016, 2017, 2018, 2022, 2023",
+    "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Vegetation Management and Conservation, 2018, 2019. In addition to demonstrating, I co-developed a teaching and learning module, and developed and delivered a workshop teaching the basics of data-science in R using data collected by the students.",
+  "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Applied Ecology: 2014, 2015.",
+    "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Ecology: 2014.",
+  "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Biology of Cells and Organisms: 2012, 2013, 2014, 2015.",
+   "School of BioScience, School of Geographys", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities.",
+    "School of BioScience, School of Geographys", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing."
+) %>% 
+  detailed_entries(what, when, with, where, why)
+```
+
+# Scholarships and Awards
+
+```{r scholarships}
+tribble(~Award, ~Description, ~Organisation, ~Year,
+        "Metascience 2023 travel award", "$300 USD travel award to attend the Metascience 2023 conference in Washington, D.C", "Organisation", "2023",
+        "AIMOS top-up scholarship", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)", "2022",
+        "Research Excellence Award for Interdisciplinary Research", "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne", "2022",
+        "Melbourne Centre of Data Science Doctral Academy Fellow", "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne", "2021",
+        "Australian Government Research Training Program (RTP) Scholarship", "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne", "2017 - Current",
+        ) %>% 
+        detailed_entries(why = Description, when = Year, with = Award, what = Organisation)
+```
+
+# Selected Talks and Workshops
+
+```{r talks}
+tibble::tribble(
+  ~name, ~event, ~location, ~year,
+    "Many Analysts: Heterogeneity in results among studies in ecology and evolutionary biology", "Invited speaker Mini-note Panel: Association for Interdisciplinary Metaresearch and Open Science Conference", "Melbourne, Australia", 2022,
+    "A many-analyst project in ecology and evolutionary biology demonstrates heterogeneity driven by analysts’ decisions and generates new questions about variability in this heterogeneity ", "Big Team Science Conference", "Global - Online", 2022,
+  "Workshop: Creating reproducible workflows in R with the targets:: package", "Society for Open Reliable and Transparent Ecology and Evoluation Workshop Series", "Online - Oceania", 2022,
+  "ResearchOps: A principled framework and guide to computational reproducibility,", "Association for Interdisciplinary Metaresearch and Open Science Conference", "Melbourne, Australia", 2021,
+  "Modelling as Ways of Knowing - How Viewing Models as an Epistemic Activity is useful in Ecology", "Association for Interdisciplinary Metaresearch and Open Science Conference", "Melbourne, Australia", 2021,
+  "Workshop: 'Preregistration Templates for Model-Based Research' ", "Model Based Research and Reproducibility Workshop", "Centre for Open Science, Virgina, USA", 2020,
+  "Workshop: 'Preregistration Templates for Ecology and Conservation'", "Department of Land Water & Planning", "Melbourne", 2020,
+  "Workshop: 'Transparency & Reproducibility in Non-Hypothesis Testing Research' ", "Society for the Improvement of Psychological Sciences", "Rotterdam", 2019,
+    "Poster Presentation: 'Questionable Research Practices in Non-Hypothesis Testing Research' ", "MetaScience Symposium & Association for Interdisciplinary Meta-Research and Open Science Conference", "San Francisco & Melbourne", 2019,
+  "Talk: 'Questionable Research Practices in Non-Hypothesis Testing Research' ", "Credibility Revolution 2018", "Melbourne", 2018,
+  "Talk 'Beyond P-hacking: Questionable Research Practices in Non-Null Hypothesis Significance Testing' ", "UQ Open Science Conference", "Brisbane", 2018,
+"Workshop: 'Data Wrangling for Ecologists'", "Victorian Biodiversity Conference", "Melbourne", 2017
+) %>% 
+  detailed_entries(
+    what = name,
+    when = year,
+    with = event,
+    where = location
+  )
+
+
+```
+
+# Research Consultancy, Professional Membership
+
+```{r}
+tibble::tribble(
+  ~name, ~year, ~with, ~location, ~description,
+  "Testing and Developing preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia", "March 2020 - Present", "Department of Environment Land Water & Planning", "Consultancy", "This research consultancy contributes to Elliot's PhD. This work involved the design and delivery of a collaborative workshop with DELWP in order to develop preregistration templates and methodology relevant to ecological modelling, in particular within decision-making and applied contexts.",
+  "Secretary / Treasurer, www.sortee.org","September 2020 - 2022", "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)", "Professional Membership", "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined. Anyone interested in improving research in these disciplines is welcome to join, regardless of experience. The society is international in scope, membership, and objectives. Elliot is a founding member and co-chair of the executive committee."
+) %>% detailed_entries(
+  what = name,
+  when = year,
+  with = with,
+  where = location,
+  why = description
+)
+```
+
+# Publications
+
+```{r pubs}
+tribble(~title, ~year, ~author, ~journal, ~doi,
+        "Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process", "2023","Hannah Fraser, Martin Bush, Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, Elliot Gould, Victoria Hemming, Daniel G. Hamilton, Libby Rumpff, David P. Wilkinson, Ross Pearson, Felix Singleton Thorn, Raquel Ashton, Aaron Willcox, Charles T. Gray, Andrew Head, Melissa Ross, Rebecca Groenewegen, Alexandru Marcoci, Ans Vercammen, Timothy H. Parker, Rink Hoekstra, Shinichi Nakagawa, David R. Mandel, Don van Ravenzwaaij, Marissa McBride, Richard O. Sinnott, Peter Vesk, Mark Burgman, Fiona Fidler", "PLOS ONE", "https://doi.org/10.1371/journal.pone.0274429",
+        "Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions", "2023",  "Shinichi Nakagawa, Edward Ivimey-Cook, Matthew J. Grainger, Rose E. O’Dea, Samantha Burke, Szymon M. Drobniak, Elliot Gould, Erin L. Macartney, April Robin Martinig, Matthieu Paquet, Kyle Morrison, Joel L. Pick, Patrice Pottier, Lorenzo Ricolfi, David P. Wilkinson, Aaron Willcox, Coralie Williams, Laura A. B. Wilson, Saras M. Windecker, Yefeng Yang & Malgorzata Lagisz", "Nature Communications", "Forthcoming",
+        "Predicting and reasoning about replicability using structured groups", "2023 (accepted)",  "Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, David P. Wilkinson, Victoria Hemming, Martin Bush, Hannah Fraser, Felix Singleton-Thorn, Marissa F. McBride, Elliot Gould, AndrewHead, Dan Hamilton, Libby Rumpff, Rink Hoekstra, Fiona Fidler", "Royal Society Open Science", "https://osf.io/preprints/metaarxiv/vtpmb/",
+        "What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects", "2022", "Christopher Stuart Jones, Freya Mary Thomas, Damian Richard Michael, Hannah Fraser, Elliot Gould, Jim Begley, Jenny Wilson, Peter Anton Vesk, Libby Rumpff", "journal", "https://doi.org/10.1002/eap.2728",
+        "Mathematically aggregating experts’ predictions of possible futures", "2021",  "A. M. Hanea, D. P. Wilkinson, M. McBride, A. Lyon, D. van Ravenzwaaij, F. Singleton Thorn, C. Gray, D. R. Mandel, A. Willcox, E. Gould, E. T. Smith, F. Mody, M. Bush, F. Fidler, H. Fraser, B. C. Wintle", "PLOS ONE", "https://doi.org/10.1371/journal.pone.0256919",
+        "Towards open, reliable, and transparent ecology and evolutionary biology", "2021",  "Rose E. O'Dea, Timothy H. Parker, Yung En Chee, Antica Culina, Szymon M. Drobniak, David H. Duncan, Fiona Fidler, Elliot Gould, Malika Ihle, Clint D. Kelly, Malgorzata Lagisz, Dominique G. Roche, Alfredo Sánchez-Tójar, David P. Wilkinson, Bonnie C. Wintle & Shinichi Nakagawa", "BMC Biology", "https://doi.org/10.1186/s12915-021-01006-3",
+        "A practical guide for conservation planning using the General Ecosystem Model for Southern Australian Woodlands.", "2021", "Good, M., Fraser, H., Gould, E., Vesk, P., Rumpff, L.", "NESP Threatened Sprecies Recovery Hub Project 7.2, Brisbane", "https://www.nespthreatenedspecies.edu.au/media/yvlbs1tk/7-2-a-practical-guide-for-conservation-planning-using-the-general-ecosystem-model-for-southern-australian-woodlands_v3.pdf"
+) %>% 
+  detailed_entries(
+    what = author,
+    when = year,
+    with = title,
+    where = journal,
+    why = doi
+  )
+
+
+```
+
+

@@ -1,0 +1,265 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-red}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Elliot Gould}{}
+
+\position{PhD Candidate, Research Assistant, Consultant}
+\address{School of Ecosystem and Forest Sciences, University of
+Melbourne}
+
+\mobile{0406680382}
+\email{\href{mailto:elliot.gould@unimelb.edu.au}{\nolinkurl{elliot.gould@unimelb.edu.au}}}
+\github{egouldo}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{Elliot Gould is an Australian citizen and PhD candidate at the
+School of Ecosystem and Forest Sciences, and a Quantitative Research
+Assistant on the \href{replicats.research.unimelb.edu.au/}{repliCATS
+project} at the School of History and Philosophical Studies, University
+of Melbourne. Their PhD investigates the transparency and
+reproducibility of ecological models in applied ecology and conservation
+decision-making. In their role as a Quantitative Research Assistant,
+Elliot has managed a small team of researchers to develop a data
+provisioning platform for the repliCATS project, and taken lead
+responsibility for data management, as well as contributing to research
+on metascience. They have an enthusiasm for teaching and skill-sharing,
+particularly with regard to building a strong community of practice in
+emerging open-science methodology and computational biology within
+ecology and conservation. Elliot's research seeks to use data science
+techniques to advance the open-science movement by improving
+transparency and reproducibility, focussing on ecology and conservation
+Science. Other research interests include decision-theory, Structured
+Decision Making, and plant ecology (especially grasslands of the
+Victorian Volcanic Plains).}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {April 2023}
+    {Elliot Gould~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{University of Melbourne}{Doctor of Philosophy, Science}{}{November 2017 - Present}{\begin{cvitems}
+\item Thesis Title: Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science
+\end{cvitems}}
+    \cventry{University of Melbourne}{Master of Science (Distinction)}{}{March 2012 - December 2015}{\begin{cvitems}
+\item Research Training Degree, with 70\% original research and 30\% coursework. Course Weighted Average Mark: 82.312
+\item Thesis Title: Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Bachelor of Science}{}{March 2005 - November 2011}{\begin{cvitems}
+\item Major in Ecology, First Class Honours Average
+\end{cvitems}}
+    \cventry{University of Melbourne}{Bachelor of Arts}{}{March 2005 - November 2011}{\begin{cvitems}
+\item Major in Indonesian, First Class Honours Average
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{employment-history}{%
+\section{Employment History}\label{employment-history}}
+
+\begin{cventries}
+    \cventry{School of Historical and Philosophical Studies, School of BioSciences}{Quantitative Research Assistant - repliCATS, SCORE Program}{University of Melbourne}{February 2019 - Present}{\begin{cvitems}
+\item Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency  (DARPA) that aims to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. The repliCATS project is one team within the SCORE project, based in Melbourne. In this role, Elliot lead a small team within the repliCATS project to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.
+\end{cvitems}}
+    \cventry{School of BioSciences}{Demonstrator / Tutor}{University of Melbourne}{2012 - Present}{\begin{cvitems}
+\item Environmental Risk Assessment: 2016, 2017, 2018, 2022, 2023
+\item Vegetation Management and Conservation, 2018, 2019. In addition to demonstrating, I co-developed a teaching and learning module, and developed and delivered a workshop teaching the basics of data-science in R using data collected by the students.
+\item Applied Ecology: 2014, 2015.
+\item Ecology: 2014.
+\item Biology of Cells and Organisms: 2012, 2013, 2014, 2015.
+\end{cvitems}}
+    \cventry{School of BioScience, School of Geographys}{Research Assistant, Various Roles}{University of Melbourne}{2015 - Present}{\begin{cvitems}
+\item National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities.
+\item Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{scholarships-and-awards}{%
+\section{Scholarships and Awards}\label{scholarships-and-awards}}
+
+\begin{cventries}
+    \cventry{Organisation}{Metascience 2023 travel award}{}{2023}{\begin{cvitems}
+\item \$300 USD travel award to attend the Metascience 2023 conference in Washington, D.C
+\end{cvitems}}
+    \cventry{Association for Interdisciplinary Metaresearch and Open Science (AIMOS)}{AIMOS top-up scholarship}{}{2022}{\begin{cvitems}
+\item AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Research Excellence Award for Interdisciplinary Research}{}{2022}{\begin{cvitems}
+\item Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.
+\end{cvitems}}
+    \cventry{Melbourne Centre for Data Science, University of Melbourne}{Melbourne Centre of Data Science Doctral Academy Fellow}{}{2021}{\begin{cvitems}
+\item The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.
+\end{cvitems}}
+    \cventry{The University of Melbourne}{Australian Government Research Training Program (RTP) Scholarship}{}{2017 - Current}{\begin{cvitems}
+\item Awarded to high-achieving students undertaking graduate research at the University of Melbourne.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{selected-talks-and-workshops}{%
+\section{Selected Talks and
+Workshops}\label{selected-talks-and-workshops}}
+
+\begin{cventries}
+    \cventry{Many Analysts: Heterogeneity in results among studies in ecology and evolutionary biology}{Invited speaker Mini-note Panel: Association for Interdisciplinary Metaresearch and Open Science Conference}{Melbourne, Australia}{2022}{}\vspace{-4.0mm}
+    \cventry{A many-analyst project in ecology and evolutionary biology demonstrates heterogeneity driven by analysts’ decisions and generates new questions about variability in this heterogeneity }{Big Team Science Conference}{Global - Online}{2022}{}\vspace{-4.0mm}
+    \cventry{Workshop: Creating reproducible workflows in R with the targets:: package}{Society for Open Reliable and Transparent Ecology and Evoluation Workshop Series}{Online - Oceania}{2022}{}\vspace{-4.0mm}
+    \cventry{ResearchOps: A principled framework and guide to computational reproducibility,}{Association for Interdisciplinary Metaresearch and Open Science Conference}{Melbourne, Australia}{2021}{}\vspace{-4.0mm}
+    \cventry{Modelling as Ways of Knowing - How Viewing Models as an Epistemic Activity is useful in Ecology}{Association for Interdisciplinary Metaresearch and Open Science Conference}{Melbourne, Australia}{2021}{}\vspace{-4.0mm}
+    \cventry{Workshop: 'Preregistration Templates for Model-Based Research' }{Model Based Research and Reproducibility Workshop}{Centre for Open Science, Virgina, USA}{2020}{}\vspace{-4.0mm}
+    \cventry{Workshop: 'Preregistration Templates for Ecology and Conservation'}{Department of Land Water \& Planning}{Melbourne}{2020}{}\vspace{-4.0mm}
+    \cventry{Workshop: 'Transparency \& Reproducibility in Non-Hypothesis Testing Research' }{Society for the Improvement of Psychological Sciences}{Rotterdam}{2019}{}\vspace{-4.0mm}
+    \cventry{Poster Presentation: 'Questionable Research Practices in Non-Hypothesis Testing Research' }{MetaScience Symposium \& Association for Interdisciplinary Meta-Research and Open Science Conference}{San Francisco \& Melbourne}{2019}{}\vspace{-4.0mm}
+    \cventry{Talk: 'Questionable Research Practices in Non-Hypothesis Testing Research' }{Credibility Revolution 2018}{Melbourne}{2018}{}\vspace{-4.0mm}
+    \cventry{Talk 'Beyond P-hacking: Questionable Research Practices in Non-Null Hypothesis Significance Testing' }{UQ Open Science Conference}{Brisbane}{2018}{}\vspace{-4.0mm}
+    \cventry{Workshop: 'Data Wrangling for Ecologists'}{Victorian Biodiversity Conference}{Melbourne}{2017}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{research-consultancy-professional-membership}{%
+\section{Research Consultancy, Professional
+Membership}\label{research-consultancy-professional-membership}}
+
+\begin{cventries}
+    \cventry{Testing and Developing preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia}{Department of Environment Land Water \& Planning}{Consultancy}{March 2020 - Present}{\begin{cvitems}
+\item This research consultancy contributes to Elliot's PhD. This work involved the design and delivery of a collaborative workshop with DELWP in order to develop preregistration templates and methodology relevant to ecological modelling, in particular within decision-making and applied contexts.
+\end{cvitems}}
+    \cventry{Secretary / Treasurer, www.sortee.org}{Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)}{Professional Membership}{September 2020 - 2022}{\begin{cvitems}
+\item SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined. Anyone interested in improving research in these disciplines is welcome to join, regardless of experience. The society is international in scope, membership, and objectives. Elliot is a founding member and co-chair of the executive committee.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\begin{cventries}
+    \cventry{Hannah Fraser, Martin Bush, Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, Elliot Gould, Victoria Hemming, Daniel G. Hamilton, Libby Rumpff, David P. Wilkinson, Ross Pearson, Felix Singleton Thorn, Raquel Ashton, Aaron Willcox, Charles T. Gray, Andrew Head, Melissa Ross, Rebecca Groenewegen, Alexandru Marcoci, Ans Vercammen, Timothy H. Parker, Rink Hoekstra, Shinichi Nakagawa, David R. Mandel, Don van Ravenzwaaij, Marissa McBride, Richard O. Sinnott, Peter Vesk, Mark Burgman, Fiona Fidler}{Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process}{PLOS ONE}{2023}{\begin{cvitems}
+\item https://doi.org/10.1371/journal.pone.0274429
+\end{cvitems}}
+    \cventry{Shinichi Nakagawa, Edward Ivimey-Cook, Matthew J. Grainger, Rose E. O’Dea, Samantha Burke, Szymon M. Drobniak, Elliot Gould, Erin L. Macartney, April Robin Martinig, Matthieu Paquet, Kyle Morrison, Joel L. Pick, Patrice Pottier, Lorenzo Ricolfi, David P. Wilkinson, Aaron Willcox, Coralie Williams, Laura A. B. Wilson, Saras M. Windecker, Yefeng Yang \& Malgorzata Lagisz}{Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions}{Nature Communications}{2023}{\begin{cvitems}
+\item Forthcoming
+\end{cvitems}}
+    \cventry{Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, David P. Wilkinson, Victoria Hemming, Martin Bush, Hannah Fraser, Felix Singleton-Thorn, Marissa F. McBride, Elliot Gould, AndrewHead, Dan Hamilton, Libby Rumpff, Rink Hoekstra, Fiona Fidler}{Predicting and reasoning about replicability using structured groups}{Royal Society Open Science}{2023 (accepted)}{\begin{cvitems}
+\item https://osf.io/preprints/metaarxiv/vtpmb/
+\end{cvitems}}
+    \cventry{Christopher Stuart Jones, Freya Mary Thomas, Damian Richard Michael, Hannah Fraser, Elliot Gould, Jim Begley, Jenny Wilson, Peter Anton Vesk, Libby Rumpff}{What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects}{journal}{2022}{\begin{cvitems}
+\item https://doi.org/10.1002/eap.2728
+\end{cvitems}}
+    \cventry{A. M. Hanea, D. P. Wilkinson, M. McBride, A. Lyon, D. van Ravenzwaaij, F. Singleton Thorn, C. Gray, D. R. Mandel, A. Willcox, E. Gould, E. T. Smith, F. Mody, M. Bush, F. Fidler, H. Fraser, B. C. Wintle}{Mathematically aggregating experts’ predictions of possible futures}{PLOS ONE}{2021}{\begin{cvitems}
+\item https://doi.org/10.1371/journal.pone.0256919
+\end{cvitems}}
+    \cventry{Rose E. O'Dea, Timothy H. Parker, Yung En Chee, Antica Culina, Szymon M. Drobniak, David H. Duncan, Fiona Fidler, Elliot Gould, Malika Ihle, Clint D. Kelly, Malgorzata Lagisz, Dominique G. Roche, Alfredo Sánchez-Tójar, David P. Wilkinson, Bonnie C. Wintle \& Shinichi Nakagawa}{Towards open, reliable, and transparent ecology and evolutionary biology}{BMC Biology}{2021}{\begin{cvitems}
+\item https://doi.org/10.1186/s12915-021-01006-3
+\end{cvitems}}
+    \cventry{Good, M., Fraser, H., Gould, E., Vesk, P., Rumpff, L.}{A practical guide for conservation planning using the General Ecosystem Model for Southern Australian Woodlands.}{NESP Threatened Sprecies Recovery Hub Project 7.2, Brisbane}{2021}{\begin{cvitems}
+\item https://www.nespthreatenedspecies.edu.au/media/yvlbs1tk/7-2-a-practical-guide-for-conservation-planning-using-the-general-ecosystem-model-for-southern-australian-woodlands\_v3.pdf
+\end{cvitems}}
+\end{cventries}
+
+\end{document}

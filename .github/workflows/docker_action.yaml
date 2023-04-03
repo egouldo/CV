@@ -1,0 +1,48 @@
+#................................................
+# In case I have to use docker credentials see:
+#    https://stackoverflow.com/a/64051330/8302386
+#................................................
+
+
+on:
+  schedule:
+    - cron: "0 23 * * SUN"
+  push:
+    branches: master
+
+name: docker_cv
+
+
+jobs:
+  build:
+    name: create the curriculum vitae pdf file
+    runs-on: ubuntu-latest
+    container:
+      image: mlampros/mycvitae:rstudiodev
+    steps:
+     - name: Set up Git repository
+       uses: actions/checkout@v2
+     - name: install texlive
+       run: |
+          sudo apt-get -y update
+          sudo apt-get install -y texlive-base texlive-latex-base
+          sudo apt-get install -y texlive-latex-recommended
+          sudo apt-get install -y texlive-xetex
+          sudo apt-get install -y texlive-fonts-extra
+     - name: render the curriculum vitae
+       run: |
+         Rscript -e "print(getwd())"
+         Rscript -e "rmarkdown::render(input = file.path(getwd(), 'docs', 'CV.Rmd'), params = list(work_dir = getwd()))"
+     - name: Commit files
+       run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add --all
+          git commit -am "add the CV.pdf file to the 'docs' directory of the repository"
+          git push
+     - name: Upload pdf file
+       uses: actions/upload-artifact@v1
+       with:
+         name: docs
+         path: docs/
+

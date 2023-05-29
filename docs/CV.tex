@@ -20,12 +20,10 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt,a4paper,]{awesome-cv}
+\documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\usepackage{geometry}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -57,16 +55,14 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 
-\photo{Gould\_professional\_profile\_pic\_photo.jpeg}
 \name{Elliot Gould}{}
 
 \position{PhD Candidate, Research Assistant, Consultant}
 \address{School of Agriculture, Food and Ecosystem SCiences, University
 of Melbourne}
 
-\mobile{406680382}
+\mobile{0406680382}
 \email{\href{mailto:elliot.gould@unimelb.edu.au}{\nolinkurl{elliot.gould@unimelb.edu.au}}}
-\orcid{0000-0002-6585-538X}
 \github{egouldo}
 
 % \gitlab{gitlab-id}
@@ -107,8 +103,8 @@ Plains).}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{2em}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
@@ -121,8 +117,8 @@ Plains).}
  {}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -265,7 +261,5 @@ Membership}\label{research-consultancy-professional-membership}}
 \item https://www.nespthreatenedspecies.edu.au/media/yvlbs1tk/7-2-a-practical-guide-for-conservation-planning-using-the-general-ecosystem-model-for-southern-australian-woodlands\_v3.pdf
 \end{cvitems}}
 \end{cventries}
-
-
 
 \end{document}

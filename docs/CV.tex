@@ -20,10 +20,12 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt,a4paper,]{awesome-cv}
 
 % Configure page margins with geometry
+\usepackage{geometry}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -55,14 +57,16 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 
+\photo{Gould\_professional\_profile\_pic\_photo.jpeg}
 \name{Elliot Gould}{}
 
 \position{PhD Candidate, Research Assistant, Consultant}
-\address{School of Ecosystem and Forest Sciences, University of
-Melbourne}
+\address{School of Agriculture, Food and Ecosystem SCiences, University
+of Melbourne}
 
-\mobile{0406680382}
+\mobile{406680382}
 \email{\href{mailto:elliot.gould@unimelb.edu.au}{\nolinkurl{elliot.gould@unimelb.edu.au}}}
+\orcid{0000-0002-6585-538X}
 \github{egouldo}
 
 % \gitlab{gitlab-id}
@@ -70,25 +74,25 @@ Melbourne}
 % \skype{skype-id}
 % \reddit{reddit-id}
 
-\quote{Elliot Gould is an Australian citizen and PhD candidate at the
-School of Ecosystem and Forest Sciences, and a Quantitative Research
-Assistant on the \href{replicats.research.unimelb.edu.au/}{repliCATS
-project} at the School of History and Philosophical Studies, University
-of Melbourne. Their PhD investigates the transparency and
-reproducibility of ecological models in applied ecology and conservation
-decision-making. In their role as a Quantitative Research Assistant,
-Elliot has managed a small team of researchers to develop a data
-provisioning platform for the repliCATS project, and taken lead
-responsibility for data management, as well as contributing to research
-on metascience. They have an enthusiasm for teaching and skill-sharing,
-particularly with regard to building a strong community of practice in
-emerging open-science methodology and computational biology within
-ecology and conservation. Elliot's research seeks to use data science
-techniques to advance the open-science movement by improving
-transparency and reproducibility, focussing on ecology and conservation
-Science. Other research interests include decision-theory, Structured
-Decision Making, and plant ecology (especially grasslands of the
-Victorian Volcanic Plains).}
+\quote{Elliot Gould is a PhD candidate at the School of EAgriculture,
+Food and Ecosystem Sciences, and a Quantitative Research Assistant on
+the \href{replicats.research.unimelb.edu.au/}{repliCATS project} at the
+School of History and Philosophical Studies, University of Melbourne.
+Their PhD investigates the transparency and reproducibility of
+ecological models in applied ecology and conservation decision-making.
+In their role as a Quantitative Research Assistant, Elliot managed a
+small team of researchers to develop a data provisioning platform for
+the repliCATS project, and taken lead responsibility for data
+management, as well as contributing to research on metascience. They
+have an enthusiasm for teaching and skill-sharing, particularly with
+regard to building a strong community of practice in emerging
+open-science methodology and computational biology within ecology and
+conservation. Elliot's research seeks to use data science techniques to
+advance the open-science movement by improving transparency and
+reproducibility, focussing on ecology and conservation Science. Other
+research interests include decision-theory, Structured Decision Making,
+and plant ecology (especially grasslands of the Victorian Volcanic
+Plains).}
 
 \usepackage{booktabs}
 
@@ -103,8 +107,8 @@ Victorian Volcanic Plains).}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
@@ -117,8 +121,8 @@ Victorian Volcanic Plains).}
  {}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -176,7 +180,7 @@ Victorian Volcanic Plains).}
 \item Ecology: 2014.
 \item Biology of Cells and Organisms: 2012, 2013, 2014, 2015.
 \end{cvitems}}
-    \cventry{School of BioScience, School of Geographys}{Research Assistant, Various Roles}{University of Melbourne}{2015 - Present}{\begin{cvitems}
+    \cventry{School of BioScience, School of Geography}{Research Assistant, Various Roles}{University of Melbourne}{2015 - Present}{\begin{cvitems}
 \item National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities.
 \item Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing.
 \end{cvitems}}
@@ -230,7 +234,7 @@ Membership}\label{research-consultancy-professional-membership}}
     \cventry{Testing and Developing preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia}{Department of Environment Land Water \& Planning}{Consultancy}{March 2020 - Present}{\begin{cvitems}
 \item This research consultancy contributes to Elliot's PhD. This work involved the design and delivery of a collaborative workshop with DELWP in order to develop preregistration templates and methodology relevant to ecological modelling, in particular within decision-making and applied contexts.
 \end{cvitems}}
-    \cventry{Secretary / Treasurer, www.sortee.org}{Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)}{Professional Membership}{September 2020 - 2022}{\begin{cvitems}
+    \cventry{Founding Member and Secretary / Treasurer, www.sortee.org}{Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)}{Professional Membership}{2020 - 2022, 2023}{\begin{cvitems}
 \item SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined. Anyone interested in improving research in these disciplines is welcome to join, regardless of experience. The society is international in scope, membership, and objectives. Elliot is a founding member and co-chair of the executive committee.
 \end{cvitems}}
 \end{cventries}
@@ -243,12 +247,12 @@ Membership}\label{research-consultancy-professional-membership}}
 \item https://doi.org/10.1371/journal.pone.0274429
 \end{cvitems}}
     \cventry{Shinichi Nakagawa, Edward Ivimey-Cook, Matthew J. Grainger, Rose E. O’Dea, Samantha Burke, Szymon M. Drobniak, Elliot Gould, Erin L. Macartney, April Robin Martinig, Matthieu Paquet, Kyle Morrison, Joel L. Pick, Patrice Pottier, Lorenzo Ricolfi, David P. Wilkinson, Aaron Willcox, Coralie Williams, Laura A. B. Wilson, Saras M. Windecker, Yefeng Yang \& Malgorzata Lagisz}{Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions}{Nature Communications}{2023}{\begin{cvitems}
-\item Forthcoming
+\item https://doi.org/10.1038/s41467-023-37039-1
 \end{cvitems}}
-    \cventry{Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, David P. Wilkinson, Victoria Hemming, Martin Bush, Hannah Fraser, Felix Singleton-Thorn, Marissa F. McBride, Elliot Gould, AndrewHead, Dan Hamilton, Libby Rumpff, Rink Hoekstra, Fiona Fidler}{Predicting and reasoning about replicability using structured groups}{Royal Society Open Science}{2023 (accepted)}{\begin{cvitems}
+    \cventry{Bonnie C. Wintle, Fallon Mody, Eden T. Smith, Anca M. Hanea, David P. Wilkinson, Victoria Hemming, Martin Bush, Hannah Fraser, Felix Singleton-Thorn, Marissa F. McBride, Elliot Gould, AndrewHead, Dan Hamilton, Libby Rumpff, Rink Hoekstra, Fiona Fidler}{Predicting and reasoning about replicability using structured groups}{Royal Society Open Science}{2023}{\begin{cvitems}
 \item https://osf.io/preprints/metaarxiv/vtpmb/
 \end{cvitems}}
-    \cventry{Christopher Stuart Jones, Freya Mary Thomas, Damian Richard Michael, Hannah Fraser, Elliot Gould, Jim Begley, Jenny Wilson, Peter Anton Vesk, Libby Rumpff}{What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects}{journal}{2022}{\begin{cvitems}
+    \cventry{Christopher Stuart Jones, Freya Mary Thomas, Damian Richard Michael, Hannah Fraser, Elliot Gould, Jim Begley, Jenny Wilson, Peter Anton Vesk, Libby Rumpff}{What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects}{Ecological Applications}{2022}{\begin{cvitems}
 \item https://doi.org/10.1002/eap.2728
 \end{cvitems}}
     \cventry{A. M. Hanea, D. P. Wilkinson, M. McBride, A. Lyon, D. van Ravenzwaaij, F. Singleton Thorn, C. Gray, D. R. Mandel, A. Willcox, E. Gould, E. T. Smith, F. Mody, M. Bush, F. Fidler, H. Fraser, B. C. Wintle}{Mathematically aggregating experts’ predictions of possible futures}{PLOS ONE}{2021}{\begin{cvitems}
@@ -261,5 +265,7 @@ Membership}\label{research-consultancy-professional-membership}}
 \item https://www.nespthreatenedspecies.edu.au/media/yvlbs1tk/7-2-a-practical-guide-for-conservation-planning-using-the-general-ecosystem-model-for-southern-australian-woodlands\_v3.pdf
 \end{cvitems}}
 \end{cventries}
+
+
 
 \end{document}

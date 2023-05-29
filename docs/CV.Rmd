@@ -50,8 +50,8 @@ tribble(
   "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Applied Ecology: 2014, 2015.",
     "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Ecology: 2014.",
   "School of BioSciences", "2012 - Present", "Demonstrator / Tutor", "University of Melbourne", "Biology of Cells and Organisms: 2012, 2013, 2014, 2015.",
-   "School of BioScience, School of Geographys", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities.",
-    "School of BioScience, School of Geographys", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing."
+   "School of BioScience, School of Geography", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities.",
+    "School of BioScience, School of Geography", "2015 - Present", "Research Assistant, Various Roles", "University of Melbourne", "Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing."
 ) %>% 
   detailed_entries(what, when, with, where, why)
 ```

@@ -29,7 +29,10 @@ jobs:
           sudo apt-get install -y texlive-latex-recommended
           sudo apt-get install -y texlive-xetex
           sudo apt-get install -y texlive-fonts-extra
-          sudo apt-get install -y academicons
+     - name: install academicons with R tinytex
+       run: |
+         Rscript -e "install.packages('tinytex')"
+         Rscript -e "tinytex::tlmgr_install('academicons')"
      - name: render the curriculum vitae
        run: |
          Rscript -e "print(getwd())"

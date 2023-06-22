@@ -60,6 +60,7 @@ tribble(
 
 ```{r scholarships}
 tribble(~Award, ~Description, ~Organisation, ~Year,
+        "Science Abroad Travelling Scholarships - SEFS 2023", "This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request. Awarded $2000.", "University of Melbourne, Faculty of Science", "2023",
         "Metascience 2023 travel award", "$300 USD travel award to attend the Metascience 2023 conference in Washington, D.C", "Organisation", "2023",
         "AIMOS top-up scholarship", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)", "2022",
         "Research Excellence Award for Interdisciplinary Research", "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne", "2022",

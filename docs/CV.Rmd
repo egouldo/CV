@@ -9,6 +9,9 @@ aboutme: "Elliot Gould is a PhD candidate at the School of Agriculture, Food and
 date: "`r format(Sys.time(), '%B %Y')`"
 #profilepic: "Gould_professional_profile_pic_photo.jpeg"
 #orcid: 0000-0002-6585-538X
+documentclass: article
+classoption: a4paper
+#letterpaper
 output: 
   vitae::awesomecv:
     keep_tex: true
@@ -76,7 +79,7 @@ tribble(~Award, ~Description, ~Organisation, ~Year,
 ```{r pubs}
 tribble(~title, ~year, ~author, ~journal, ~doi,
         "Same data, different analysts: variation in effect sizes due to analytical decisions in ecology and evolutionary biology", "2023", "Gould, E., Fraser, H., Parker, T.H. et al.", "EcoEvoRxiv", "https://doi.org/10.32942/X2GG62",
-        "Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology", "2023", "Ivimey-Cook, E., Pick, J.L., Bairos-Novak, K., Culina, A., Gould, E., Grainger, M., Marshall, B., Moreau, D., Paquet, M., Royauté, R., Sanchez-Tojar, A., Silva, I., Windecker, S.", "Journal of Evolutionary Biology", "https://doi.org/10.32942/X2CG64",
+        "Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology", "2023", "Ivimey-Cook, E., Pick, J.L., Bairos-Novak, K., Culina, A., Gould, E., Grainger, M., Marshall, B., Moreau, D., Paquet, M., Royauté, R., Sanchez-Tojar, A., Silva, I., Windecker, S.", "Journal of Evolutionary Biology", "https://doi.org/10.1111/jeb.14230",
         "Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process", "2023","Fraser, H.,Bush, M., Wintle, B.C., Mody, F., Smith, E.T.,Hanea, A.M., Gould, E.,  Hemming, V., Hamilton, D.G., Rumpff, L., Wilkinson, D.P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C.T., Head, A., Ross, M., Groenewegen, R., Marcoci, A., Vercammen, A., Parker, T.H., Hoekstra, R., Nakagawa, S., Mandel, D.R., van Ravenzwaaij, D., McBride, M.F., Sinnott, R.O., Vesk, P.A., Burgman, M., Fidler, F.", "PLOS ONE", "https://doi.org/10.1371/journal.pone.0274429",
         "Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions", "2023",  "Nakagawa, S., Ivimey-Cook, E., Grainger, M.J., O’Dea, R.E., Burke, S., Drobniak, S.M., Gould, E., Macartney, E.L., Martinig, A.R., Paquet, M., Morrison, K., Pick, J.L., Pottier, P., Ricolfi, L., Wilkinson, D.P., Willcox, A., Williams, C., Wilson, L.A.B., Windecker, S.M., Yang, Y., Lagisz, M.", "Nature Communications", "https://doi.org/10.1038/s41467-023-37039-1",
         "Predicting and reasoning about replicability using structured groups", "2023",  "Wintle, B.C., Mody, F., Smith, E.T.,Hanea, A.M., Wilkinson, D.P., Hemming, V., Bush, M., Fraser, H., Singleton Thorn, F., McBride, M.F., Gould, E., Head, A., Hamilton, D.G., Rumpff, L., Hoekstra, R., Fidler, F.", "Royal Society Open Science", "https://osf.io/preprints/metaarxiv/vtpmb/",

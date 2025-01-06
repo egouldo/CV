@@ -140,7 +140,10 @@ tibble::tribble(
 #| eval: true
 tibble::tribble(
     ~role, ~subject, ~years, ~where,
-    "Demonstrator", "Environmental Risk Assessment", c(2016, 2017, 2018, 2022, 2023, 2024), "University of Melbourne",
+    "Demonstrator, Tutor", "Environmental Risk Assessment", c(2016, 2017, 2018, 2022, 2023, 2024), "University of Melbourne",
+    "Demonstrator, Tutor", "Vegetation Management \\& Conservation", c(2018, 2019), "University of Melbourne",
+    "Demonstrator, Tutor", "Applied Ecology", c(2014, 2015), "University of Melbourne",
+    "Demonstrator, Tutor", "Biology of Cells \\& Organisms", c(2012, 2013,2014,2015), "University of Melbourne",
     "Guest Lecturer", "Biometry", c(2023), "University of Melbourne",
     "Guest Lecturer", "Critical Thinking with Data", c(2021), "University of Melbourne"
 )  %>%  cvteaching(role = "role", 

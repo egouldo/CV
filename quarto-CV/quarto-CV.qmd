@@ -133,15 +133,11 @@ tibble::tribble(
 
 ### Teaching
 
-\cvevent{2016 - 2024}{Demonstrator}{University of Melbourne}{\begin{description}[font=$\bullet$~\scshape\color{maincol!50!black}]\item [Environmental Risk Assessment] 2016, 2017, 2018, 2022, 2023, 2024\end{description}}
-
-
-\cvevent{2021 - 2023}{Guest Lecturer}{University of Melbourne}{\begin{description}[font=$\bullet$~\scshape\color{maincol!50!black}]\item [Biometry] 2023\item [Critical Thinking with Data] 2021\end{description}}
 
 ```{r}
 #| label: teaching
 #| output: asis
-#| eval: false
+#| eval: true
 tibble::tribble(
     ~role, ~subject, ~years, ~where,
     "Demonstrator", "Environmental Risk Assessment", c(2016, 2017, 2018, 2022, 2023, 2024), "University of Melbourne",

@@ -1,0 +1,226 @@
+---
+title: Untitled
+format:
+  modern2-cv-pdf: default
+author: Elliot Gould
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  accent: 6A2C70
+jobtitle: PhD Candidate, Research Assistant, Tutor/Demonstrator, Consultant
+sidebar:
+  bullets:
+    - Konstanz, Germany
+    - german
+    - married
+  sections: 
+    - name: Skills
+      items:
+        - text: R
+          exp: 
+            text: "10+ yrs."
+            num: 1
+        - text: Python
+          exp: 
+            text: "2 yrs."
+            num: 0.2
+        - text: JavaScript
+          exp: 
+            text: "4 yrs."
+            num: 0.4
+        - text: Lua
+          exp: 
+            text: "1 yr."
+            num: 0.1
+        - text: Rmarkdown
+          exp: 
+            text: "6 yrs."
+            num: 0.6
+        - text: Quarto
+          exp: 
+            text: "1 yr."
+            num: 0.1
+        - text: Data Analysis
+          exp: 
+            text: "9 years"
+            num: 0.9
+        - text: Web Scraping
+          exp: 
+            text: "8 yrs."
+            num: 0.8
+        - text: Web Development
+          exp: 
+            text: "8 years"
+            num: 0.8
+    - name: Tools
+      items:
+        - Git
+        - RStudio
+        - VS Code
+        - Terminal 
+    - name: Education
+      items:
+        - text: "Doctor of Philosophy, Science"
+          inst: "University of Melbourne"
+          time: "12/2017 - Present"
+          details: 'Thesis: "Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science"'
+        - text: "Master of Science (Distinction)"
+          inst: "University of Melbourne"
+          time: "2012 - 2015"
+          details: 'Thesis: "Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites."'
+        - text: "Bachelor of Science"
+          inst: "University of Melbourne"
+          time: "2005 - 2011"
+          details: "Major in Ecology, First Class Honours Average."
+        - text: "Bachelor of Arts"
+          inst: "University of Melbourne"
+          time: "2005 - 2011"
+          details: "Major in Indonesian, First Class Honours Average."
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Melbourne, Australia
+        - icon: phone
+          text: "+61 406680382"
+        - icon: envelope
+          text: elliot.gould@unimelb.edu.au
+        - icon: github
+          text: egouldo
+          href: https://github.com/egouldo
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+#| message: false
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,role,items){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", tbl[[role]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+
+library(dplyr)
+library(purrr)
+
+cvteaching <- function(tbl, role, subject, years, where){
+  command_start <- "\\cvevent"
+  
+  tbl_reshaped <- tbl %>%  
+    reframe(years = flatten_dbl(years),
+               .by = c(role, subject, where)) %>% 
+    mutate(when = glue::glue(min(years), max(years), .sep = " - "), 
+           .by = role, where) %>% 
+    reframe(years = paste0(years, collapse = ", "), 
+            .by = c(role, when, subject, where))
+  
+  tbl_items <- 
+    tbl_reshaped %>% 
+    reframe(items = glue::glue("\\item [{subject}] {years}") %>% 
+              glue::glue_collapse(sep = "") %>%
+              paste("\\begin{description}[font=$\\bullet$~\\scshape\\color{maincol!50!black}]", ., "\\end{description}", 
+                    sep = ""), 
+            .by = "role") 
+  
+  res <- paste0(
+        command_start, "{", pluck(tbl_reshaped, "when", unique), "}",
+        "{", pluck(tbl_reshaped, role, unique), "}",
+        "{", pluck(tbl_reshaped, where, unique), "}",
+         "{", pluck(tbl_items, "items"), "}"
+        )
+  cat(res, sep = "\n\n\n")
+}
+```
+
+# Summary
+
+"Elliot Gould is a PhD candidate at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. In their role as a Quantitative Research Assistant, Elliot managed a small team of researchers to develop a data analytics and management platform for the repliCATS project, and contributed to research on metascience. They have an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grasslands of the Victorian Volcanic Plains)."
+
+# Employment
+
+### Research
+
+```{r}
+#| label: research
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "Consultant Ecological Modeller", "Department of Environment Land Water and Planning\nVictorian Government", "March 2020 - Present", "This research consultancy comprises a component of my PhD, aiming to test and develop preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia. I designed and delivered a collaborative workshop with DEECA staff, analysed and visualised environmental flow and modelled vegetation outcome data.",
+    "Quantitative Research Assistant - repliCATS, SCORE Program", "School of Historical and Philosophical Studies,\n School of BioSciences\nUniversity of Melbourne", "2019 - 2024",
+    "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency  (DARPA) that aims to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. The repliCATS project is one team within the SCORE project, based in Melbourne. In this role, Elliot lead a small team within the repliCATS project to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success."
+) |>
+    cvevents(when = "dates", 
+             what = "role", 
+             where = "institution", 
+             descr = "details")
+```
+
+
+### Teaching
+
+\cvevent{2016 - 2024}{Demonstrator}{University of Melbourne}{\begin{description}[font=$\bullet$~\scshape\color{maincol!50!black}]\item [Environmental Risk Assessment] 2016, 2017, 2018, 2022, 2023, 2024\end{description}}
+
+
+\cvevent{2021 - 2023}{Guest Lecturer}{University of Melbourne}{\begin{description}[font=$\bullet$~\scshape\color{maincol!50!black}]\item [Biometry] 2023\item [Critical Thinking with Data] 2021\end{description}}
+
+```{r}
+#| label: teaching
+#| output: asis
+#| eval: false
+tibble::tribble(
+    ~role, ~subject, ~years, ~where,
+    "Demonstrator", "Environmental Risk Assessment", c(2016, 2017, 2018, 2022, 2023, 2024), "University of Melbourne",
+    "Guest Lecturer", "Biometry", c(2023), "University of Melbourne",
+    "Guest Lecturer", "Critical Thinking with Data", c(2021), "University of Melbourne"
+)  %>%  cvteaching(role = "role", 
+                   subject = "subject", 
+                   years = "years", 
+                   where = "where")
+```
+
+
+# Projects
+
+See my [github profile](https://github.com/egouldo) for a comprehensive list of open source projects.
+
+```{r}
+#| label: proj
+#| output: asis
+tibble::tribble(
+    ~what, ~role, ~items,
+    "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"),
+    "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"),
+    "Quarto extensions", "Creator and Maintainer",
+    c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"),
+    "soccerverse.com (football analytics website)", "Creator and Maintainer",
+    c(
+        "Manual and automated gathering of football results around the world",
+        "Harmonizing data (e.g. club names and managers)",
+        "Implementation of ranking algorithms",
+        "Predicting of league tables and matchforecasting",
+        "Uses R, JavaScript, HTML, and CSS",
+        "around 1000 visitors/month"
+    )
+) |>
+    cvproj(what = "what", role = "role", items = "items")
+
+```

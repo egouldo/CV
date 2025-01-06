@@ -7,12 +7,12 @@ cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 
   main: B83B5E
   accent: 6A2C70
-jobtitle: PhD Candidate, Research Assistant, Tutor/Demonstrator, Consultant
+jobtitle: they/them, he/him
 sidebar:
   bullets:
-    - Konstanz, Germany
-    - german
-    - married
+    - PhD Candidate
+    - Research Assistant & Consultant
+    - Tutor / Demonstrator
   sections: 
     - name: Skills
       items:

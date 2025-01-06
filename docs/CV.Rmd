@@ -118,7 +118,7 @@ tibble::tribble(
   )
 ```
 
-# Research Consultancy, Professional Membership
+# Consultancy, Membership, Service
 
 ```{r}
 tibble::tribble(

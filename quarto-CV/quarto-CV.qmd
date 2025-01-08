@@ -50,7 +50,7 @@ sidebar:
         - text: "Preregistration Template Working Group Member"
           inst: "Centre for Open Science"
           time: "2023 - Present"
-          details: "[The Preregistration Template Working Group](https://www.cos.io/blog/new-working-group-seeks-to-curate-and-evaluate-preregistration-templates) seeks to: 1. Establish criteria to evaluate the suitability of new preregistration templates for inclusion in the Open Science Framework (OSF); 2. Develop a procedure by which community creators of preregistration templates can put templates forward for inclusion in OSF; 3. Advise and inform COS on issues related to preregistration implementation in OSF."
+          details: "The Preregistration Template Working Group seeks to: 1. Establish criteria to evaluate the suitability of new preregistration templates for inclusion in the Open Science Framework (OSF); 2. Develop a procedure by which community creators of preregistration templates can put templates forward for inclusion in OSF; 3. Advise and inform COS on issues related to preregistration implementation in OSF."
         - text: "Founding Member, Secretary / Treasurer"
           inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
           time: "2020 - 2023"

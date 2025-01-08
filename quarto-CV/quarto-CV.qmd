@@ -1,7 +1,9 @@
 ---
 title: Untitled
 format:
-  modern2-cv-pdf: default
+  modern2-cv-pdf: 
+    header-includes:  
+      - \providecommand{\tightlist}{%\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 author: Elliot Gould
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 

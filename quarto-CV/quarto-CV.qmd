@@ -182,24 +182,17 @@ tibble::tribble(
 # Scholarships and Awards
 
 ```{r}
-#| label: proj
+#| label: awards
 #| output: asis
+#| eval: false
 tibble::tribble(
-    ~what, ~role, ~items,
-    "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"),
-    "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"),
-    "Quarto extensions", "Creator and Maintainer",
-    c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"),
-    "soccerverse.com (football analytics website)", "Creator and Maintainer",
-    c(
-        "Manual and automated gathering of football results around the world",
-        "Harmonizing data (e.g. club names and managers)",
-        "Implementation of ranking algorithms",
-        "Predicting of league tables and matchforecasting",
-        "Uses R, JavaScript, HTML, and CSS",
-        "around 1000 visitors/month"
-    )
+  ~award, ~institution, ~items,
+  "Science Abroad Travelling Scholarships, 2023", "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences", c("This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request."),
+  "blah", "blah", c("blah"),
+  "blah", "blah", c("blah"),
+  "blah", "blah", c("blah")
 ) |>
-    cvproj(what = "what", role = "role", items = "items")
-
+  cvproj(what = "award", role = "institution", items = "items")
 ```
+
+

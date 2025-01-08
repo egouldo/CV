@@ -13,7 +13,18 @@ sidebar:
     - PhD Candidate
     - Research Assistant & Consultant
     - Tutor / Demonstrator
-  sections: 
+  sections:
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Melbourne, Australia
+        - icon: phone
+          text: "+61 406680382"
+        - icon: envelope
+          text: elliot.gould@unimelb.edu.au
+        - icon: github
+          text: egouldo
+          href: https://github.com/egouldo
     - name: Education
       items:
         - text: "Doctor of Philosophy, Science"
@@ -34,15 +45,6 @@ sidebar:
           details: "Major in Indonesian, First Class Honours Average."
     - name: Contact
       items:
-        - icon: map-marker
-          text: Melbourne, Australia
-        - icon: phone
-          text: "+61 406680382"
-        - icon: envelope
-          text: elliot.gould@unimelb.edu.au
-        - icon: github
-          text: egouldo
-          href: https://github.com/egouldo
 execute: 
   echo: false
 ---

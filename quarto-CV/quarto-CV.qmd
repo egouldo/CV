@@ -29,7 +29,7 @@ sidebar:
       items:
         - text: "Doctor of Philosophy, Science"
           inst: "University of Melbourne"
-          time: "12/2017 - Present"
+          time: "December 2017 - Present"
           details: 'Thesis: "Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science"'
         - text: "Master of Science (Distinction)"
           inst: "University of Melbourne"

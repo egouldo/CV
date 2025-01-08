@@ -167,6 +167,19 @@ tibble::tribble(
 # Projects
 
 See my [github profile](https://github.com/egouldo) for a comprehensive list of open source projects.
+```{r}
+#| label: learning_design
+#| output: asis
+#| eval: true
+tibble::tribble(
+    ~role, ~subject, ~year, ~details,
+    "Learning Module Design \\& Delivery: Vegetation Management \\& Conservation", "School of BioSciences, University of Melbourne", 2019, "I co‐developed a teaching and learning module, and developed and delivered a workshop teaching the basics of data‐science in R using data collected by the students.") %>% 
+  cvevents(when = "year", 
+           what = "role", 
+           where = "subject", 
+           descr = "details")
+```
+# Scholarships and Awards
 
 ```{r}
 #| label: proj

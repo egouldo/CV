@@ -182,13 +182,18 @@ tibble::tribble(
 ```{r}
 #| label: awards
 #| output: asis
-#| eval: false
+#| eval: true
 tibble::tribble(
-  ~award, ~institution, ~items,
-  "Science Abroad Travelling Scholarships, 2023", "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences", c("This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request."),
-  "blah", "blah", c("blah"),
-  "blah", "blah", c("blah"),
-  "blah", "blah", c("blah")
+  ~award, ~items, ~institution,
+  "Science Abroad Travelling Scholarships, 2023",
+    '"This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request. Awarded AUD\\$2000"', "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences",
+  "Metascience 2023 travel award", 
+    "\\$300 USD travel award to attend the Metascience 2023 conference.", "Metascience Conference 2023, Washington D.C.", "AIMOS top-up scholarship", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
+  "Research Excellence Award for Interdisciplinary Research (Group Award)", 
+    "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne",
+  "Melbourne Centre of Data Science Doctral Academy Fellow, 2021", "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne",
+  "Australian Government Research Training Program (RTP) Scholarship, 2017",
+    "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne"
 ) |>
   cvproj(what = "award", role = "institution", items = "items")
 ```

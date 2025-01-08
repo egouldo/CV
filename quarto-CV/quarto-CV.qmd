@@ -163,11 +163,6 @@ tibble::tribble(
                    years = "years", 
                    where = "where")
 ```
-
-
-# Projects
-
-See my [github profile](https://github.com/egouldo) for a comprehensive list of open source projects.
 ```{r}
 #| label: learning_design
 #| output: asis

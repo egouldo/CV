@@ -139,21 +139,19 @@ cvteaching <- function(tbl, role, subject, years, where){
 
 # Summary
 
-"Elliot Gould is a PhD candidate at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. In their role as a Quantitative Research Assistant, Elliot managed a small team of researchers to develop a data analytics and management platform for the repliCATS project, and contributed to research on metascience. They have an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grassy woodlands & grasslands of the Victorian Volcanic Plains)."
+"Elliot Gould is a PhD candidate at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Elliot has an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation.  Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grassy woodlands & grasslands of the Victorian Volcanic Plains)."
 
-# Employment
-
-### Research
+# Research Experience
 
 ```{r}
 #| label: research
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details,
-    "Consultant Ecological Modeller", "Department of Environment Land Water and Planning\nVictorian Government", "March 2020 - Present", "This research consultancy comprises a component of my PhD, aiming to test and develop preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia. I designed and delivered a collaborative workshop with DEECA staff, analysed and visualised environmental flow and modelled vegetation outcome data.",
-    "Quantitative Research Assistant - repliCATS, SCORE Program", "School of Historical and Philosophical Studies,\n School of BioSciences\nUniversity of Melbourne", "2019 - 2024",
-    "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency  (DARPA) that aims to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. The repliCATS project is one team within the SCORE project, based in Melbourne. In this role, Elliot lead a small team within the repliCATS project to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
-    "Research Assistant, Various Roles", "School of BioSciences, School of Geography\nUniversity of Melbourne", "2015 - Present", "National Environmental Science Programme, Threatened Species Recovery Hub: Conservation actions for Threatened Ecological Communities. Various plant ecology and Structured Decision Making projects, involving: data analysis and visualisations, building shiny Apps, model building and testing." 
+    "Consultant Ecological Modeller", "Department of Environment Land Water and Planning\nVictorian Government", "2020 - Present", "This research consultancy comprises a component of my PhD, aiming to test and develop preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia. I designed and delivered a collaborative workshop with DEECA staff, analysed and visualised environmental flow and modelled vegetation outcome data.",
+    "Quantitative Research Assistant - repliCATS, SCORE Program", "School of Historical and Philosophical Studies, School of BioSciences, University of Melbourne", "2019 - 2025",
+    "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency (DARPA) that aimed to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. In this role, I lead a small team within the repliCATS project team to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
+    "Research Assistant, Various Roles", "School of BioSciences, School of Geography\nUniversity of Melbourne", "2015 - Present", "I contributed to various plant ecology and Structured Decision Making research projects for the National Environmental Science Programme, Threatened Species Recovery Hub, including: data analysis and visualisations, building shiny apps, model building and testing, report writing."
 ) |>
     cvevents(when = "dates", 
              what = "role", 
@@ -161,9 +159,9 @@ tibble::tribble(
              descr = "details")
 ```
 
+\newpage
 
-### Teaching
-
+# Teaching Experience
 
 ```{r}
 #| label: teaching

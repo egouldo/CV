@@ -55,6 +55,24 @@ sidebar:
           inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
           time: "2020 - 2023"
           details: "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined."
+    - name: "Talks \\& Workshops"
+      items:
+        - text: "Invited Speaker and Panellist: Data Bites"
+          inst: "Melbourne Centre for Data Science"
+          time: "2024"
+          details: "Reproducibility in Practice: Modelling in Ecology, Evolutionary Biology and Conservation Science."
+        - text: "Invited Speaker: Mini Note Panel"
+          inst: "Association for Interdisciplinary Metaresearch and Open Science (AIMOS) Conference"
+          time: "2022"
+          details: "Many Analysts: Heterogeneity in Results Among Studies in Ecology and Evolutionary Biology."
+        - text: "SORTEE Workshop Series"
+          inst: "Society for Open Reproducible Transparent Ecology and Evolutionary Biology"
+          time: "2022"
+          details: "Creating Reproducible Workflows in R with the 'targets::' package."
+        - text: "Model Based Research and Reproducibility Workshop"
+          inst: "Center for Open Science"
+          time: "2020"
+          details: "Preregistration Templates for Model-Based Research."
 execute: 
   echo: false
 ---

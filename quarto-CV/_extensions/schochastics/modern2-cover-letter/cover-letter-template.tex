@@ -30,7 +30,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and don't use a cv template
-\documentclass[10pt,A4,german]{article}	
+\documentclass[10pt,A4]{article}	
 
 
 %----------------------------------------------------------------------------------------
@@ -39,7 +39,6 @@
 
 % we use utf8 since we want to build from any machine
 \usepackage[utf8]{inputenc}		
-\usepackage[ngerman]{isodate}
 \usepackage{fancyhdr}
 \usepackage[numbers]{natbib}
 
@@ -50,7 +49,7 @@
 % provides \isempty test
 \usepackage{xstring, xifthen}
 \usepackage{enumitem}
-\usepackage[german]{babel}
+\usepackage{babel}
 \usepackage{lipsum}
 \usepackage{pdfpages}
 \usepackage{changepage}
@@ -286,13 +285,16 @@
     \end{tabular}\\
 
 \cvtext{\textbf{$organization.contact-person$
-}\newline $organization.name$
+}\newline $organization.department$
+\newline $organization.faculty$
+\newline $organization.institution$
+\newline $organization.mail$
 \newline $organization.street$ 
 \newline $organization.zip$ $organization.city$}\\[40pt]
  \raggedright
   \begin{tabular}[t]{p{5cm}p{6.8cm}p{8cm}}
      &  & 
-\cvtext{$contact.city$, $date$}\\[20pt]
+\cvtext{$date$}\\[20pt]
   \end{tabular}
 \cvtext{\large{\textbf{$sub-title$}}}\\[25pt]
 

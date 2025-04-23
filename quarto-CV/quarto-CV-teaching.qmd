@@ -55,7 +55,7 @@ sidebar:
           inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
           time: "2020 - 2023"
           details: "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined."
-    - name: "Talks \\& Workshops"
+    - name: "Workshops \\& Talks"
       items:
         - text: "Invited Speaker and Panellist: Data Bites"
           inst: "Melbourne Centre for Data Science"
@@ -80,6 +80,7 @@ execute:
 ```{r}
 #| label: cvevents
 #| message: false
+#| warning: false
 cvevents <- function(tbl, when, what, where, descr) {
 
     command_start <- "\\cvevent"
@@ -173,7 +174,7 @@ tibble::tribble(
     "Demonstrator, Tutor", "Vegetation Management \\& Conservation", c(2018, 2019), "University of Melbourne",
     "Demonstrator, Tutor", "Applied Ecology", c(2014, 2015), "University of Melbourne",
     "Demonstrator, Tutor", "Biology of Cells \\& Organisms", c(2012, 2013,2014,2015), "University of Melbourne",
-    "Guest Lecturer", "Environmental Risk Assessment", c(2024), "University of Melbourne",
+    "Guest Lecturer", "Environmental Risk Assessment", c(2024, 2025), "University of Melbourne",
     "Guest Lecturer", "Biometry", c(2023), "University of Melbourne",
     "Guest Lecturer", "Critical Thinking with Data", c(2021), "University of Melbourne",
 )  %>%  cvteaching(role = "role", 
@@ -237,7 +238,7 @@ Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, 
 
 \vspace{2mm}
  
-Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). https://doi.org/10.1098/rsos.221553 (Original work published June 1, 2023)
+Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). [doi.org/10.1098/rsos.221553](https://doi.org/10.1098/rsos.221553)
 
 \vspace{2mm}
 

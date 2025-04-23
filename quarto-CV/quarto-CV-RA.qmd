@@ -1,0 +1,246 @@
+---
+title: Untitled
+format:
+  modern2-cv-pdf: 
+    header-includes:  
+      - \providecommand{\tightlist}{%\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+author: Elliot Gould
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: "005487"
+  accent: "385438"
+jobtitle: they/them, he/him
+sidebar:
+  bullets:
+    - PhD Candidate
+    - Research Assistant & Consultant
+    - Tutor / Demonstrator
+  sections:
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Melbourne, Australia
+        - icon: phone
+          text: "+61 406680382"
+        - icon: envelope
+          text: elliot.gould@unimelb.edu.au
+        - icon: github
+          text: egouldo
+          href: https://github.com/egouldo
+    - name: Education
+      items:
+        - text: "Doctor of Philosophy, Science"
+          inst: "University of Melbourne"
+          time: "December 2017 - Present"
+          details: 'Thesis: "Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science"'
+        - text: "Master of Science (Distinction)"
+          inst: "University of Melbourne"
+          time: "2012 - 2015"
+          details: 'Thesis: "Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites."'
+        - text: "Bachelor of Science"
+          inst: "University of Melbourne"
+          time: "2005 - 2011"
+          details: "Major in Ecology, First Class Honours Average."
+        - text: "Bachelor of Arts"
+          inst: "University of Melbourne"
+          time: "2005 - 2011"
+          details: "Major in Indonesian, First Class Honours Average."
+    - name: Service
+      items:
+        - text: "Preregistration Template Working Group Member"
+          inst: "Centre for Open Science"
+          time: "2023 - Present"
+          details: "The Preregistration Template Working Group seeks to: 1. Establish criteria to evaluate the suitability of new preregistration templates for inclusion in the Open Science Framework (OSF); 2. Develop a procedure by which community creators of preregistration templates can put templates forward for inclusion in OSF; 3. Advise and inform COS on issues related to preregistration implementation in OSF."
+        - text: "Founding Member, Secretary / Treasurer"
+          inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
+          time: "2020 - 2023"
+          details: "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined."
+    - name: "Workshops \\& Talks"
+      items:
+        - text: "Invited Speaker and Panellist: Data Bites"
+          inst: "Melbourne Centre for Data Science"
+          time: "2024"
+          details: "Reproducibility in Practice: Modelling in Ecology, Evolutionary Biology and Conservation Science."
+        - text: "Invited Speaker: Mini Note Panel"
+          inst: "Association for Interdisciplinary Metaresearch and Open Science (AIMOS) Conference"
+          time: "2022"
+          details: "Many Analysts: Heterogeneity in Results Among Studies in Ecology and Evolutionary Biology."
+        - text: "SORTEE Workshop Series"
+          inst: "Society for Open Reproducible Transparent Ecology and Evolutionary Biology"
+          time: "2022"
+          details: "Creating Reproducible Workflows in R with the 'targets::' package."
+        - text: "Model Based Research and Reproducibility Workshop"
+          inst: "Center for Open Science"
+          time: "2020"
+          details: "Preregistration Templates for Model-Based Research."
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+#| message: false
+#| warning: false
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,role,items){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", tbl[[role]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+
+library(dplyr)
+library(purrr)
+
+cvteaching <- function(tbl, role, subject, years, where){
+  command_start <- "\\cvevent"
+  
+  tbl_reshaped <- tbl %>%  
+    reframe(years = flatten_dbl(years),
+               .by = c(role, subject, where)) %>% 
+    mutate(when = glue::glue(min(years), max(years), .sep = " - "), 
+           .by = role, where) %>% 
+    reframe(years = paste0(years, collapse = ", "), 
+            .by = c(role, when, subject, where))
+  
+  tbl_items <- 
+    tbl_reshaped %>% 
+    reframe(items = glue::glue("\\item [{subject}] {years}") %>% 
+              glue::glue_collapse(sep = "") %>%
+              paste("\\begin{description}[font=$\\bullet$~\\scshape\\color{maincol!50!black}]", ., "\\end{description}", 
+                    sep = ""), 
+            .by = "role") 
+  
+  res <- paste0(
+        command_start, "{", pluck(tbl_reshaped, "when", unique), "}",
+        "{", pluck(tbl_reshaped, role, unique), "}",
+        "{", pluck(tbl_reshaped, where, unique), "}",
+         "{", pluck(tbl_items, "items"), "}"
+        )
+  cat(res, sep = "\n\n\n")
+}
+```
+
+# Summary
+
+Elliot Gould is a PhD candidate at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Elliot has an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation.  Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grassy woodlands & grasslands of the Victorian Volcanic Plains).
+
+# Research Experience
+
+```{r}
+#| label: research
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "Consultant Ecological Modeller", "Department of Environment Land Water and Planning\nVictorian Government", "2020 - Present", "This research consultancy comprises a component of my PhD, aiming to test and develop preregistration templates for ecology and conservation using a case study of environmental flows management in Victoria, Australia. I designed and delivered a collaborative workshop with DEECA staff, analysed and visualised environmental flow and modelled vegetation outcome data.",
+    "Quantitative Research Assistant - repliCATS, SCORE Program", "School of Historical and Philosophical Studies, School of BioSciences, University of Melbourne", "2019 - 2025",
+    "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency (DARPA) that aimed to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. In this role, I lead a small team within the repliCATS project team to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
+    "Research Assistant, Various Roles", "School of BioSciences, School of Geography\nUniversity of Melbourne", "2015 - Present", "I contributed to various plant ecology and Structured Decision Making research projects for the National Environmental Science Programme, Threatened Species Recovery Hub, including: data analysis and visualisations, building shiny apps, model building and testing, report writing."
+) |>
+    cvevents(when = "dates", 
+             what = "role", 
+             where = "institution", 
+             descr = "details")
+```
+
+\newpage
+
+# Teaching Experience
+
+```{r}
+#| label: teaching
+#| output: asis
+#| eval: true
+tibble::tribble(
+    ~role, ~subject, ~years, ~where,
+    "Demonstrator, Tutor", "Environmental Risk Assessment", c(2016, 2017, 2018, 2022, 2023, 2024, 2025), "University of Melbourne",
+    "Demonstrator, Tutor", "Vegetation Management \\& Conservation", c(2018, 2019), "University of Melbourne",
+    "Demonstrator, Tutor", "Applied Ecology", c(2014, 2015), "University of Melbourne",
+    "Demonstrator, Tutor", "Biology of Cells \\& Organisms", c(2012, 2013,2014,2015), "University of Melbourne",
+    "Guest Lecturer", "Environmental Risk Assessment", c(2024, 2025), "University of Melbourne",
+    "Guest Lecturer", "Biometry", c(2023), "University of Melbourne",
+    "Guest Lecturer", "Critical Thinking with Data", c(2021), "University of Melbourne",
+)  %>%  cvteaching(role = "role", 
+                   subject = "subject", 
+                   years = "years", 
+                   where = "where")
+```
+
+# Scholarships and Awards
+
+```{r}
+#| label: awards
+#| output: asis
+#| eval: true
+tibble::tribble(
+  ~award, ~items, ~institution,
+  "Science Abroad Travelling Scholarships, 2023",
+    'This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request. Awarded AUD\\$2000.', "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences",
+  "Metascience 2023 travel award", 
+    "USD\\$300  travel award to attend the Metascience 2023 conference.", "Metascience Conference 2023, Washington D.C.", "AIMOS top-up scholarship, 2022", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
+  "Research Excellence Award for Interdisciplinary Research (Group Award), 2022",
+    "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne",
+  "Melbourne Centre of Data Science Doctral Academy Fellow, 2021", "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne",
+  "Australian Government Research Training Program (RTP) Scholarship, 2017",
+    "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne"
+) |>
+  cvproj(what = "award", role = "institution", items = "items")
+```
+
+
+# Publications
+
+**Gould, E.**, Fraser, H., Parker, T., Nakagawa, S., Griffith, S., Vesk, P., Fidler, F., et al. (2025). Same data, different analysts: Variation in effect sizes due to analytical decisions in ecology and evolutionary biology. *BMC Biology*, 23(35) [doi.org/10.1186/s12915-024-02101-x](https://doi.org/10.1186/s12915-024-02101-x)
+
+\vspace{2mm}
+
+Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M., Bourne, M., Butt, N., Byrne, M., Duncan, D. H., Gorrod, E., Gosper, C. R., Jordan, R., McIntyre, S., Moore, J. L., Nerenberg, S., Pulsford, S., Richards, A. E., Rogers, D. J., ..., Vesk, P. A. (2024). A structured approach for building multi‐community State and Transition Models to support conservation planning. *Journal of Applied Ecology*, 61(9), 2294–2307. [doi.org/10.1111/1365-2664.14718](https://doi.org/10.1111/1365-2664.14718) 
+
+\vspace{2mm}
+
+Nakagawa, S., Ivimey-Cook, E. R., Grainger, M. J., O’Dea, R. E., Burke, S., Drobniak, S. M., **Gould, E.**, Macartney, E. L., Martinig, A. R., Morrison, K., Paquet, M., Pick, J. L., Pottier, P., Ricolfi, L., Wilkinson, D. P., Willcox, A., Williams, C., Wilson, L. A. B., Windecker, S. M., ..., Lagisz, M. (2023). Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions. *Nature Communications*, 14(1), 1788. [doi.org/10.1038/s41467-023-37039-1](https://doi.org/10.1038/s41467-023-37039-1)
+
+\vspace{2mm}
+
+Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., **Gould, E.**, Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R., Sánchez, A., Silva, I., & Windecker, S. M. (2023). Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. *Journal of Evolutionary Biology*. [doi.org/10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230) 
+
+\vspace{2mm}
+
+Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, J., Wilson, J., Vesk, P. A., & Rumpff, L. (2023). What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects. *Ecological Applications*, 33(1), e2728. [doi.org/10.1002/eap.2728](https://doi.org/10.1002/eap.2728) 
+
+\vspace{2mm}
+ 
+Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). [doi.org/10.1098/rsos.221553](https://doi.org/10.1098/rsos.221553)
+
+\vspace{2mm}
+
+Fraser, H., Bush, M., Wintle, B. C., Mody, F., Smith, E. T., Hanea, A. M., **Gould, E.**, Hemming, V., Hamilton, D. G., Rumpff, L., Wilkinson, D. P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C. T., Head, A., Ross, M., Groenewegen, R., ..., Fidler, F. (2023). Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process. *PLOS ONE*, 18(1), e0274429. [doi.org/10.1371/journal.pone.0274429](https://doi.org/10.1371/journal.pone.0274429) 
+
+\vspace{2mm}
+
+O’Dea, R. E., Parker, T. H., Chee, Y. E., Culina, A., Drobniak, S. M., Duncan, D. H., Fidler, F., **Gould, E.**, Ihle, M., Kelly, C. D., Lagisz, M., Roche, D. G., Sánchez-Tójar, A., Wilkinson, D. P., Wintle, B. C., & Nakagawa, S. (2021). Towards open, reliable, and transparent ecology and evolutionary biology. *BMC Biology*, 19(1). [doi.org/10.1186/s12915-021-01006-3](https://doi.org/10.1186/s12915-021-01006-3) 
+
+\vspace{2mm}
+
+Hanea, A. M., Wilkinson, D. P., McBride, M., Lyon, A., Van Ravenzwaaij, D., Singleton Thorn, F., Gray, C., Mandel, D. R., Willcox, A., **Gould, E.**, Smith, E. T., Mody, F., Bush, M., Fidler, F., Fraser, H., & Wintle, B. C. (2021). Mathematically aggregating experts’ predictions of possible futures. *PLOS ONE*, 16(9), e0256919. [doi.org/10.1371/journal.pone.0256919](https://doi.org/10.1371/journal.pone.0256919)
+
+\vspace{2mm}
+
+Good, M., Fraser, H., **Gould, E.**, Vesk, P., Rumpff, L., 2021. A practical guide for conservation planning using the General Ecosystem Model for Southern Australian Woodlands. *NESP Threatened Sprecies Recovery Hub Project 7.2*, Brisbane. 

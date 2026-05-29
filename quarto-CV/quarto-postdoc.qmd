@@ -244,7 +244,7 @@ Ivimey-Cook, E. R., Sánchez-Tójar, A., Berberi, I., Čulina, A., Roche, D. G.,
 
 \vspace{2mm}
 
-Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M., Bourne, M., Butt, N., Byrne, M., Duncan, D. H., Gorrod, E., Gosper, C. R., Jordan, R., McIntyre, S., Moore, J. L., Nerenberg, S., Pulsford, S., Richards, A. E., Rogers, D. J., ..., Vesk, P. A. (2024). A structured approach for building multi‐community State and Transition Models to support conservation planning. *Journal of Applied Ecology*, 61(9), 2294–2307. [doi.org/10.1111/1365-2664.14718](https://doi.org/10.1111/1365-2664.14718)
+Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M., Bourne, M., Butt, N., Byrne, M., Duncan, D. H., Gorrod, E., Gosper, C. R., Jordan, R., McIntyre, S., Moore, J. L., Nerenberg, S., Pulsford, S., Richards, A. E., Rogers, D. J., ..., Vesk, P. A. (2024). A structured approach for building multi‐community State and Transition Models to support conservation planning. *Journal of Applied Ecology*, 61(9), 2294–2307. <https://doi.org/10.1111/1365-2664.14718>
 
 \vspace{2mm}
 

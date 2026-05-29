@@ -62,6 +62,14 @@ sidebar:
           inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
           time: "2020 - 2023"
           details: "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined."
+    - name: "Media \\& Outreach"
+      items:
+        - icon: link
+          text: "Fraser, H. S., **Gould, E.**, & Parker, T. H. (2023, October 30). Two questions, hundreds of scientists, no easy answers: How small differences in data analysis make huge differences in results. The Conversation."
+          href: https://theconversation.com/two-questions-hundreds-of-scientists-no-easy-answers-how-small-differences-in-data-analysis-make-huge-differences-in-results-216177?utm_source=clipboard&utm_medium=bylinecopy_url_button
+        - icon: link
+          text: "Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. October, 2023."
+          href: https://doi.org/10.1038/d41586-023-03177-1
     - name: "Workshops \\& Talks"
       items:
         - text: "Invited Speaker and Panellist: Data Bites"

@@ -15,7 +15,7 @@ cvcolor:
 jobtitle: they/them, he/him
 sidebar:
   bullets:
-    - PhD Candidate
+    - Tutor / Lecturer
     - Research Assistant
     - Tutor / Demonstrator
   sections:
@@ -30,24 +30,27 @@ sidebar:
         - icon: github
           text: egouldo
           href: https://github.com/egouldo
+        - icon: orcid
+          text: 0000-0002-6585-538X
+          href: https://orcid.org/0000-0002-6585-538X
     - name: Education
       items:
         - text: "Doctor of Philosophy, Science"
           inst: "University of Melbourne"
           time: "December 2017 - June 2026"
-          details: 'Thesis: "Navigating Analytical Crossroads: Charting a course for open, reliable and transparent modelling in ecology and conservation with new frameworks and practical tools"'
+          details: '"Thesis: Navigating Analytical Crossroads: Charting a course for open, reliable and transparent modelling in ecology and conservation with new frameworks and practical tools."'
         - text: "Master of Science (Distinction)"
           inst: "University of Melbourne"
           time: "2012 - 2015"
-          details: 'Thesis: "Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites."'
+          details: '"Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites."'
         - text: "Bachelor of Science"
           inst: "University of Melbourne"
           time: "2005 - 2011"
-          details: "Major in Ecology, First Class Honours Average."
+          details: "Major in Ecology."
         - text: "Bachelor of Arts"
           inst: "University of Melbourne"
           time: "2005 - 2011"
-          details: "Major in Indonesian, First Class Honours Average."
+          details: "Major in Indonesian."
     - name: Service
       items:
         - text: "Peer-review"

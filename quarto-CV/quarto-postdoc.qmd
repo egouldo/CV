@@ -245,23 +245,23 @@ Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M.,
 
 \vspace{2mm}
 
-Nakagawa, S., Ivimey-Cook, E. R., Grainger, M. J., O’Dea, R. E., Burke, S., Drobniak, S. M., **Gould, E.**, Macartney, E. L., Martinig, A. R., Morrison, K., Paquet, M., Pick, J. L., Pottier, P., Ricolfi, L., Wilkinson, D. P., Willcox, A., Williams, C., Wilson, L. A. B., Windecker, S. M., ..., Lagisz, M. (2023). Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions. *Nature Communications*, 14(1), 1788. [doi.org/10.1038/s41467-023-37039-1](https://doi.org/10.1038/s41467-023-37039-1)
+Nakagawa, S., Ivimey-Cook, E. R., Grainger, M. J., O’Dea, R. E., Burke, S., Drobniak, S. M., **Gould, E.**, Macartney, E. L., Martinig, A. R., Morrison, K., Paquet, M., Pick, J. L., Pottier, P., Ricolfi, L., Wilkinson, D. P., Willcox, A., Williams, C., Wilson, L. A. B., Windecker, S. M., ..., Lagisz, M. (2023). Method Reporting with Initials for Transparency (MeRIT) promotes more granularity and accountability for author contributions. *Nature Communications*, 14(1), 1788. <https://doi.org/10.1038/s41467-023-37039-1>
 
 \vspace{2mm}
 
-Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., **Gould, E.**, Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R., Sánchez, A., Silva, I., & Windecker, S. M. (2023). Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. *Journal of Evolutionary Biology*. [doi.org/10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230)
+Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., **Gould, E.**, Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R., Sánchez, A., Silva, I., & Windecker, S. M. (2023). Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. *Journal of Evolutionary Biology*.  <https://doi.org/10.1111/jeb.14230>
 
 \vspace{2mm}
 
-Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, J., Wilson, J., Vesk, P. A., & Rumpff, L. (2023). What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects. *Ecological Applications*, 33(1), e2728. [doi.org/10.1002/eap.2728](https://doi.org/10.1002/eap.2728)
+Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, J., Wilson, J., Vesk, P. A., & Rumpff, L. (2023). What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects. *Ecological Applications*, 33(1), e2728. <https://doi.org/10.1002/eap.2728>
 
 \vspace{2mm}
 
-Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). [doi.org/10.1098/rsos.221553](https://doi.org/10.1098/rsos.221553)
+Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). <https://doi.org/10.1098/rsos.221553>
 
 \vspace{2mm}
 
-Fraser, H., Bush, M., Wintle, B. C., Mody, F., Smith, E. T., Hanea, A. M., **Gould, E.**, Hemming, V., Hamilton, D. G., Rumpff, L., Wilkinson, D. P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C. T., Head, A., Ross, M., Groenewegen, R., ..., Fidler, F. (2023). Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process. *PLOS ONE*, 18(1), e0274429. [doi.org/10.1371/journal.pone.0274429](https://doi.org/10.1371/journal.pone.0274429)
+Fraser, H., Bush, M., Wintle, B. C., Mody, F., Smith, E. T., Hanea, A. M., **Gould, E.**, Hemming, V., Hamilton, D. G., Rumpff, L., Wilkinson, D. P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C. T., Head, A., Ross, M., Groenewegen, R., ..., Fidler, F. (2023). Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process. *PLOS ONE*, 18(1), e0274429. <https://doi.org/10.1371/journal.pone.0274429>
 
 \vspace{2mm}
 
@@ -275,7 +275,12 @@ Hanea, A. M., Wilkinson, D. P., McBride, M., Lyon, A., Van Ravenzwaaij, D., Sing
 
 **Preprints** \vspace{1mm}
 
-Gould, E., Fraser, H., Wintle, B., Rumpff, L., & Fidler, F. (2026). *A Framework for Questionable Research Practices in Ecological Modelling*. EcoEvoRXiv. <https://doi.org/10.32942/X2DQ0K>
+Abatayo, A. L., Achakulvisut, T., Acuna, D., Aczel, B., Balaji, L., Bandrowski, A., Benjamin, D. M., Bishop, M. M., Brase, G. L., Brown, A. W., Bush, M., Caverlee, J., Chakravorti, T., Chen, Y., Daley, M., Dehghani, M., Dirzo, M., … **Gould, E.**  … Wu, J. (2026). Assessments of credibility in the social and behavioral sciences. MetaArXiv. <https://doi.org/10.31222/osf.io/7u58q_v1>
+
+\vspace{2mm}
+
+**Gould, E.**, Fraser, H., Wintle, B., Rumpff, L., & Fidler, F. (2026). *A Framework for Questionable Research Practices in Ecological Modelling*. EcoEvoRXiv. <https://doi.org/10.32942/X2DQ0K>
+
 \vspace{2mm}
 
 **Gould, E.,** Gray, C. T., Willcox, A., O’Dea, R. E., Groenewegen, R., & Wilkinson, D. P. (2026). *aggreCAT: An R package for mathematically aggregating expert judgments*. MetaArXiv. <https://doi.org/10.31222/osf.io/74tfv_v2>

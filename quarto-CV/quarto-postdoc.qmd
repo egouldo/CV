@@ -236,7 +236,7 @@ tibble::tribble(
 
 \vspace{2mm}
 
-**Gould, E.**, Fraser, H., Parker, T., Nakagawa, S., Griffith, S., Vesk, P., Fidler, F., et al. (2025). Same data, different analysts: Variation in effect sizes due to analytical decisions in ecology and evolutionary biology. *BMC Biology*, 23(35) [doi.org/10.1186/s12915-024-02101-x](https://doi.org/10.1186/s12915-024-02101-x)
+**Gould, E.**, Fraser, H., Parker, T., Nakagawa, S., Griffith, S., Vesk, P., Fidler, F., et al. (2025). Same data, different analysts: Variation in effect sizes due to analytical decisions in ecology and evolutionary biology. *BMC Biology*, 23(35) <https://doi.org/10.1186/s12915-024-02101-x>
 
 \vspace{2mm}
 

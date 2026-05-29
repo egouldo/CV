@@ -91,6 +91,17 @@ sidebar:
           inst: "Center for Open Science"
           time: "2020"
           details: "Preregistration Templates for Model-Based Research."
+    - name: "Software"
+      items:
+        - icon: r-project
+          text: "aggreCAT: Mathematically Aggregating Expert Judgments (v1.1.0)."
+          href: https://doi.org/10.5281/zenodo.20035624
+        - icon: github
+          text: "EcoConsModPreReg Format: A Quarto Template for Adaptive Preregistration of Ecological Models."
+          href: https://github.com/egouldo/EcoConsModPreReg
+        - icon: r-project
+          text: "ManyEcoEvo: an R package for analysing many-analyst style data."
+          href: "https://doi.org/10.5281/zenodo.13690949"
 execute:
   echo: false
 ---

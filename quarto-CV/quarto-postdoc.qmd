@@ -35,7 +35,7 @@ sidebar:
         - text: "Doctor of Philosophy, Science"
           inst: "University of Melbourne"
           time: "December 2017 - June 2026"
-          details: 'Thesis: "Reproducibility and Transparency of Ecological Models in Applied Ecology and Conservation Science"'
+          details: 'Thesis: "Navigating Analytical Crossroads: Charting a course for open, reliable and transparent modelling in ecology and conservation with new frameworks and practical tools"'
         - text: "Master of Science (Distinction)"
           inst: "University of Melbourne"
           time: "2012 - 2015"

@@ -207,13 +207,20 @@ tibble::tribble(
 #| eval: true
 tibble::tribble(
   ~award, ~items, ~institution,
+  "ESA Student Travel Grant, 2025",
+    "AUD\\$375 Travel grant to ESA Annual Conference, Adelaide.", "Ecological Society of Australia Student (ESA)",
   "Science Abroad Travelling Scholarships, 2023",
     'This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request. Awarded AUD\\$2000.', "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences",
   "Metascience 2023 travel award",
-    "USD\\$300  travel award to attend the Metascience 2023 conference.", "Metascience Conference 2023, Washington D.C.", "AIMOS top-up scholarship, 2022", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
+    "USD\\$300  travel award to attend the Metascience 2023 conference.", "Metascience Conference 2023, Washington D.C.",
+  "Travel Grant, 2023",
+    "Travel grant to attend departmental invited seminar on the Many Analysts project and workshop teaching git and GitHub.", "Centre de la Science de la Biodiversité du Québec, Université du Québec à Montréal.",
+  "AIMOS top-up scholarship, 2022",
+  "One of four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
   "Research Excellence Award for Interdisciplinary Research (Group Award), 2022",
     "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne",
-  "Melbourne Centre of Data Science Doctral Academy Fellow, 2021", "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne",
+  "Melbourne Centre of Data Science Doctral Academy Fellow, 2021",
+    "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne",
   "Australian Government Research Training Program (RTP) Scholarship, 2017",
     "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne"
 ) |>

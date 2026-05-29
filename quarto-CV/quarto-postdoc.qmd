@@ -50,6 +50,10 @@ sidebar:
           details: "Major in Indonesian, First Class Honours Average."
     - name: Service
       items:
+        - text: "Peer-review"
+          details: "Ecology \\& ecolution, F1000Research, Journal of Evolutionary Biology, Nature ecology \\& evolution, PCI Ecology, PloS one, Royal Society Proc. B"
+          time: "2022 - Present"
+          inst: "Condcuted between 2 - 4 reviews per year."
         - text: "Preregistration Template Working Group Member"
           inst: "Centre for Open Science"
           time: "2023 - Present"

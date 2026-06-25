@@ -1,0 +1,91 @@
+---
+date: today
+title: "Response to Key Selection Criteria"
+subtitle: "Contest point 9 - Postdoctoral Fellow"
+author: Elliot Gould
+bibliography: app.bib
+format:
+  pdf: default
+---
+
+## Background & Qualifications
+
+I have just completed a Doctor of Philosophy (Science) from the University of Melbourne, where my thesis "Navigating Analytical Crossroads: Charting a course for open, reliable and transparent modelling in ecology and conservation with new frameworks and practical tools" examines the role of researcher flexibility in the transparency of ecological modelling.
+
+My research background sits at the intersection of ecological modelling, open science, and meta-research, with a publication record spanning empirical meta-research, methodological tool development, as well as practical and theoretical contributions to research integrity in ecology and conservation science.
+
+My quantitative and ecological foundations were established through a Bachelor of Science (majoring in Ecology) and a Master of Science (Distinction), both from the University of Melbourne. My Masters thesis — "Managing Grasslands with Models: Resolving uncertainty and allocating effort among a suite of sites" — developed my expertise in ecological modelling under uncertainty, working with state-and-transition models and decision-theoretic frameworks applied to the grasslands and grassy woodlands of the Victorian Volcanic Plains. This grounding in applied plant ecology and model-based conservation decision-making has remained a thread throughout my subsequent research, including a decade of research assistant and consulting roles contributing to plant ecology, structured decision making, and environmental flows management projects for the National Environmental Science Programme and the Victorian Government.
+
+Alongside this applied ecological work, I have developed a parallel and increasingly primary focus on the transparency, reproducibility, and integrity of ecological research — culminating in a PhD that uses data science and meta-research methods to investigate and improve modelling practice in ecology and conservation. I have over 13 years of university teaching experience, strong collaborative networks across the international open science and meta-research communities, and a track record of end-to-end project management from research design through to publication-ready outputs.
+
+## Meta-Research & Open Science
+
+Meta-research and open science constitute the central focus of my PhD and broader research programme, spanning empirical investigations, methodological tool development, community leadership, and theoretical contributions to research integrity in ecology.
+
+My most direct contribution to empirical meta-research in ecology is the Many Analysts project [@Gould2025], which provided large-scale quantitative evidence of the extent to which analytical decisions drive heterogeneity in ecological effect sizes. This work connects directly to broader questions about the reliability and reproducibility of published ecological findings, and to the evidence base that motivates open science reform, particularly concerning the role of researcher degrees of freedom in driving heterogeneity in results.
+
+My remaining PhD contributions represent my most original theoretical contributions to meta-research in ecology, forming a coherent end-to-end pair: a conceptual framework for questionable research practices in ecological modelling [@Gould2025], diagnosing why and how ecological modelling is vulnerable to integrity failures, and adaptive preregistration for model-based research [@Gould2026a], providing a practical solution for preregistering ecological modelling studies that accommodates its iterative and adaptive nature.
+
+My co-authorship on [@Ivimey-Cook2025a] provides a direct, quantitative audit of whether open science mandates are translating into practice across ecology and evolutionary biology journals. Related to this, Implementing Code Review in the Scientific Workflow [@ivimey2023] translates meta-research insights into actionable, community-facing guidance on embedding reproducibility practices into day-to-day research workflows. I have also contributed to @ODea2021a, a foundational position paper which synthesises the evidence base for open science reform while outlining a roadmap for cultural and institutional change. Finally, @Nakagawa2023a contributes a specific, implementable reporting standard that increases accountability and granularity in author contribution reporting.
+
+Beyond publications, my meta-research engagement is reflected in community leadership: as a founding member and former Secretary/Treasurer of SORTEE, and as a current member of the Centre for Open Science Preregistration Template Working Group.
+
+## Meta-Analysis & Evidence Synthesis
+
+My meta-research experience spans three complementary projects that together address the reliability, transparency, and integrity of ecological research. The most significant of these is the Many Analysts project [@Gould2025], a large-scale empirical study in which 246 analysts independently analysed the same two ecological datasets to answer the same research questions. This work involved curating, harmonising and synthesising effect size estimates and point predictions and applying meta-analyses and regressions. The study revealed substantial variation in effect sizes and analytical decisions across teams, evidencing that analytical flexibility is a major, underappreciated source of heterogeneity in ecological effect-size estimates.
+
+The second project is my preprint "A Framework for Questionable Research Practices in Ecological Modelling" [@Gould2026a], which takes a meta-research lens to the problem of research integrity in model-based ecological research. The paper develops a novel conceptual framework and typology of six QRP classes — including model fishing, S-hacking, selective reporting, data curation, HARKing, and overhyping — that may occur across the model construction, evaluation, and application phases. This work provides the theoretical grounding needed to understand why ecological model-based research may be unreliable or non-reproducible, and identifies the specific decision points at which transparency and preregistration interventions should be targeted.
+
+The third project is the repliCATS/SCORE Program, a large-scale structured expert elicitation study in which I contributed to both the statistical modelling and software infrastructure underpinning the project's evidence synthesis outputs. The project developed and evaluated methods for mathematically aggregating expert judgements about the replicability of published social and behavioural science claims [@Fras], producing calibrated confidence scores at scale [@Hanea2021a]. A key contribution of mine was developing the aggreCAT R package for implementing and comparing mathematical aggregation methods [@Gould2026b], and leading the data analysis team responsible for modelling predictors of replication success.
+
+## Ecological Modelling
+
+My experience in applied ecological modelling spans over a decade of postgraduate study, research and consulting roles in which I have developed expertise in model building, testing and reporting including Bayesian belief networks, state and transition models, generalised linear mixed models and Bayesian hierarchical models.
+
+During my PhD, as part of a case study developing and testing preregistration frameworks for model-based research [@Gould2026a], I used zero-inflated generalised linear mixed models to analyse how riparian vegetation of south-east Australia in major river catchments responds to managed environmental flows.
+
+Between 2017 and 2024 my research assistance work involved building and validating state and transition (STM) models to guide conservation planning and monitoring decisions for threatened woodlands of south-eastern Australia. In @Jones2023 I helped validate an existing STM by using logistic regression and classification and regression tree models to identify which specific vegetation variables best differentiate between states and at what thresholds. In @good2024, we used similar approaches to build a series of STMs from scratch across different woodland types by synthesising expert knowledge with field data.
+
+My Masters research (University of Melbourne, 2012–2015) involved building a decision-support tool to help grassland managers prioritise conservation management actions across a suite of grasslands. This tool consisted of a Bayesian belief network that modelled grassland condition through time in response to different management actions and an optimisation model to resolve critical uncertainties in grassland condition to help managers what to do, when and where.
+
+Other modelling approaches I am familiar with through my teaching of Environmental Risk Assessment (2016–2026) include fuzzy cognitive maps, and fault and event trees.
+
+## Preregistration
+
+Preregistration for ecological and model-based research is a core focus of my PhD, and one where I have contributed at multiple levels — from theoretical development and empirical evaluation, through to practical tool-building and community standard-setting.
+
+My primary contribution is the development and empirical evaluation of Adaptive Preregistration for model-based research [@Gould2026a], which addresses a longstanding tension in the preregistration literature: that standard preregistration frameworks are poorly suited to the iterative, adaptive nature of ecological modelling. The paper develops registered flexibility — an approach that accommodates legitimate data-contingent decision-making while preserving the core transparency benefits of preregistration — tested through a real-world case study in environmental flows management with the Victorian Government. Alongside this, I developed the EcoConsModPreReg Quarto template, an open preregistration document format implementing the framework and designed to be directly usable by ecological modellers.
+
+Beyond developing tools for others, I have direct personal experience conducting preregistrations and registered reports in my own research, including preregistering components of my PhD empirical work. My membership of the COS Preregistration Template Working Group reflects ongoing engagement with preregistration standards at a community level.
+
+## Git & GitHub
+
+Version control using Git and GitHub is integral to my daily research practice. All of my analysis pipelines, R packages, Quarto websites, and Quarto extensions are version-controlled and publicly available via my GitHub profile github.com/egouldo [blocked]. I have delivered workshops teaching Git and GitHub to researchers in ecology and evolutionary biology over the last ten years, including an invited workshop at the Université du Québec à Montréal in 2023.
+
+## Participation in Scientific Research Projects
+
+I have participated in multiple externally funded, collaborative research projects throughout my career, spanning ecological modelling, conservation decision-making, meta-research, and open science.
+
+The largest and most sustained of these is the repliCATS/SCORE Program (DARPA-funded, 2019–2025), a large-scale international collaboration involving researchers across multiple institutions and disciplines. Within this project I led a small data analysis team, building statistical models investigating predictors of replication success, developing and maintaining data analysis software and infrastructure, and delivering data products to internal teams and external partners. I also contributed directly to several publications arising from the project, including work on mathematical aggregation of expert judgements and the development of the aggreCAT R package.
+
+My Victorian Government consultancy (DEECA, 2020–2025) involved designing and delivering a collaborative workshop with government staff, collecting and analysing environmental flow and modelled vegetation outcome data, and developing and testing preregistration tools within a real-world applied management context — demonstrating my ability to conduct research that bridges academic and practitioner communities.
+
+Through the National Environmental Science Programme, Threatened Species Recovery Hub, I contributed to multiple plant ecology and structured decision-making projects, including data analysis and visualisation, building Shiny applications, model building and testing, and report writing — including co-authorship on a structured approach for building multi-community state-and-transition models and a targeted monitoring framework for detecting vegetation transitions.
+
+Finally, my participation in international collaborative networks — including SORTEE, the COS Preregistration Template Working Group, and the broader meta-research community — has involved contributing to working groups, co-authoring position papers and methodological guidelines, and engaging in peer review, reflecting a sustained commitment to collaborative, community-driven research beyond individual project boundaries.
+
+## Publications & Conference Presentations
+
+I have published two first-author and co-authored 9 peer-reviewed journal articles including BMC Biology, Methods in Ecology and Evolution, Nature Communications, PLOS ONE, Journal of Applied Ecology, and Proceedings of the Royal Society B, alongside preprints (3 first-authored, 3 currently in review) and 2 refereed technical reports.
+
+I have presented at international conferences and symposia including the Metascience 2019 (San Francisco) and 2023 Conferences (Washington D.C.), and was an invited mininote speaker at the AIMOS Conference (Melbourne, Australia, 2022). I have spoken at society conferences including the Ecological Society of Australia (2015, 2024, 2025), and presented at smaller online conferences: International Statistical Ecology Conference (2020), SORTEE (2022, 2023, 2024). I have also delivered invited seminars and workshops across multiple institutions.
+
+## Proficiency in R & Related Programming Languages
+
+I have extensive experience in environmental modelling using R for data analysis, visualisation and ecological modelling, spanning multiple professional roles and research projects over the past decade. R is the backbone of my analytical and research software toolbox. I am a daily user of RStudio/Positron, and all of my manuscripts and reports are authored in RMarkdown or Quarto. I have built multiple R packages (including aggreCAT and ManyEcoEvo), Shiny applications, Quarto websites, and Quarto extensions as part of my research and research assistance roles. I also have working experience with Bash, SQL, and Python, and routinely use LaTeX and BibTeX for academic writing.
+
+## Analytical, Communication & Teamwork Skills
+
+My analytical capabilities are evidenced by my publication record and the complexity of the modelling and meta-research work I have led. My communication skills are demonstrated through over 13 years of university teaching — including guest lecturing in Biometry, Critical Thinking with Data, and Environmental Risk Assessment — as well as workshop development and delivery, invited seminars, and media contributions (including a piece in The Conversation and coverage in Nature). I am comfortable communicating both orally in small groups and to large audiences, and across a range of written mediums and communication types. I have consistently worked in collaborative, interdisciplinary team environments, including as a team lead within the repliCATS project and as a founding officer of SORTEE.
+
+## References

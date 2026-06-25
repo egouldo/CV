@@ -1,0 +1,117 @@
+\documentclass[10pt,a4paper]{article}
+
+%----------------------------------------------------------------------------------------
+%   ENCODING
+%----------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%----------------------------------------------------------------------------------------
+%   FONTS
+%----------------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont{Raleway}
+\renewcommand*\familydefault{\sfdefault}
+
+%----------------------------------------------------------------------------------------
+%   PAGE LAYOUT
+%----------------------------------------------------------------------------------------
+\usepackage[a4paper]{geometry}
+% remove all possible margins
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+\setlength{\parindent}{0mm}
+\pagestyle{empty}
+
+
+%----------------------------------------------------------------------------------------
+%   GRAPHICS AND COLOUR
+%----------------------------------------------------------------------------------------
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{blindtext}
+\usepackage{transparent}
+
+\definecolor{maincol}{HTML}{005B8E}
+\definecolor{accentcol}{HTML}{005B8E}
+\definecolor{lightcol}{RGB}{245,245,245}
+\definecolor{darkcol}{RGB}{70,70,70}
+
+%----------------------------------------------------------------------------------------
+%   HEADER AND FOOTER COMMANDS
+%----------------------------------------------------------------------------------------
+\newcommand\Header{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[accentcol]
+      (current page.north west) -- (current page.north east) --
+      ([yshift=50pt]current page.north east|-current page text area.north east) --
+      ([yshift=50pt,xshift=0cm]current page.north|-current page text area.north) --
+      ([yshift=10pt,xshift=-2cm]current page.north|-current page text area.north) --
+      ([yshift=10pt]current page.north west|-current page text area.north west) -- cycle;
+    \node[font=\sffamily\bfseries\color{white},anchor=west,
+      xshift=0.7cm,yshift=-0.32cm] at (current page.north west)
+      {\fontsize{12}{12}\selectfont $title$};
+  \end{tikzpicture}%
+}
+
+\newcommand\Footer{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[lightcol]
+      (current page.south east) -- (current page.south west) --
+      ([yshift=-80pt]current page.south east|-current page text area.south east) --
+      ([yshift=-80pt,xshift=-6cm]current page.south|-current page text area.south) --
+      ([xshift=-2.5cm,yshift=-10pt]current page.south|-current page text area.south) --
+      ([yshift=-10pt]current page.south east|-current page text area.south east) -- cycle;
+    \node[yshift=0.32cm,xshift=9cm] at (current page.south)
+      {\fontsize{10}{10}\selectfont \textbf{\thepage}};
+  \end{tikzpicture}%
+}
+
+
+%----------------------------------------------------------------------------------------
+%   APPLY TO ALL PAGES
+%----------------------------------------------------------------------------------------
+% LuaLaTeX-compatible alternative:
+\AddToHook{shipout/background}{
+  \Header
+  \Footer
+}
+
+%----------------------------------------------------------------------------------------
+%   HYPERLINKS
+%----------------------------------------------------------------------------------------
+\usepackage[hidelinks, breaklinks=true]{hyperref}
+
+%----------------------------------------------------------------------------------------
+%   BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+$if(bibliography)$
+\usepackage[numbers]{natbib}
+$endif$
+
+%----------------------------------------------------------------------------------------
+%   PANDOC REQUIREMENTS
+%   These macros are required by Pandoc-generated content
+%----------------------------------------------------------------------------------------
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+$body$
+
+$if(bibliography)$
+\bibliographystyle{plainnat}
+\bibliography{$bibliography$}
+$endif$
+
+\end{document}

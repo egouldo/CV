@@ -1,0 +1,17 @@
+{
+    "positron.r.useNativePipe": true,
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "cSpell.words": [
+        "AIMOS",
+        "DEECA",
+        "MCDS",
+        "SORTEE"
+    ]
+}

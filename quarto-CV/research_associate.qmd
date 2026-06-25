@@ -1,0 +1,22 @@
+---
+title: 'Response to Key Selection Criteria'
+format:
+  pdf:
+    keep-tex: true
+    mainfont: raleway
+    template: KSC_template.tex
+bibliography: app.bib
+---
+
+
+
+
+# KSA 1
+
+```{=latex}
+\blindtext
+```
+
+# KSA 2
+
+TEXT

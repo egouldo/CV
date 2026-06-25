@@ -10,7 +10,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -18,7 +18,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -29,7 +29,7 @@
 %
 %============================================================================%
 
-\documentclass[10pt,A4,english]{article}	
+\documentclass[10pt,A4,english]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
 %----------------------------------------------------------------------------------------
 
 % we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 \usepackage[USenglish]{isodate}
 \usepackage{fancyhdr}
 % \usepackage[numbers]{natbib}
@@ -61,7 +61,7 @@
 \usepackage[default]{$cvfont$}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
@@ -69,10 +69,11 @@
 
 %----------------------------------------------------------------------------------------
 %	FONT AWESOME ICONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 % include the fontawesome icon set
 \usepackage{fontawesome5}
+\usepackage{academicons}
 
 % use to vertically center content
 % credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
@@ -86,23 +87,26 @@
 \setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
 
 % icon shortcut
-\newcommand{\icon}[2] { 							
+\newcommand{\icon}[2] {
 	\makebox(#2, #2){\textcolor{maincol}{\textcolor{maincol}{\faIcon{#1}}}}
-}	
+}
 
 
 % icon with text shortcut
-\newcommand{\icontext}[3]{ 						
+\newcommand{\icontext}[3]{
 	\vcenteredhbox{\icon{#1}{#2}}  \hspace{2pt}  \parbox{0.9\mpwidth}{\textcolor{black}{#3}}
 }
 
 % icon with website url
-\newcommand{\iconhref}[4]{ 						
-    \vcenteredhbox{\icon{#1}{#2}}  \hspace{2pt} \href{#4}{\textcolor{black}{#3}}
+% \newcommand{\iconhref}[4]{
+%     \vcenteredhbox{\icon{#1}{#2}}  \hspace{2pt} \href{#4}{\textcolor{black}{#3}}
+% }
+\newcommand{\iconhref}[4]{%
+    \leavevmode\vcenteredhbox{\icon{#1}{#2}}\hspace{2pt}\href{#4}{\textcolor{black}{#3}}%
 }
 
 % icon with email link
-\newcommand{\iconemail}[5]{ 						
+\newcommand{\iconemail}[5]{
     \vcenteredhbox{\icon{#1}{#2}{#5}}  \hspace{2pt} \href{mailto:#4}{\textcolor{#5}{#3}}
 }
 
@@ -111,7 +115,7 @@
 %----------------------------------------------------------------------------------------
 
 % page outer frames (debug-only)
-% \usepackage{showframe}		
+% \usepackage{showframe}
 
 % we use paracol to display breakable two columns
 \usepackage{paracol}
@@ -138,7 +142,7 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 % extended aligning of tabular cells
 \usepackage{array}
@@ -151,7 +155,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -159,17 +163,17 @@
 % use this for floating figures
 % \usepackage{wrapfig}
 % \usepackage{float}
-% \floatstyle{boxed} 
+% \floatstyle{boxed}
 % \restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}			
-\usepackage{ragged2e}	
+%for drawing graphics
+\usepackage{tikz}
+\usepackage{ragged2e}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 %----------------------------------------------------------------------------------------
 %	Bibliography
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 $if(csl-refs)$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
@@ -213,7 +217,7 @@ $if(nocite-ids)$
 $endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 \usepackage{transparent}
 \usepackage{color}
 
@@ -232,15 +236,16 @@ $endif$
 \definecolor{accentcol}{HTML}{$cvcolor.accent$}
 
 
-
-% Package for links, must be the last package used
-\usepackage[hidelinks]{hyperref}
-
 % returns minipage width minus two times \fboxsep
 % to keep padding included in width calculations
 % can also be used for other boxes / environments
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
-	
+
+%----------------------------------------------------------------------------------------
+%   HYPERLINKS
+%----------------------------------------------------------------------------------------
+\usepackage{xurl}                              % allow URL line breaks — must come before hyperref
+\usepackage[hidelinks, breaklinks=true]{hyperref} % Package for links, must be the last package used
 
 
 %============================================================================%
@@ -304,7 +309,7 @@ $endif$
 	\vspace{16pt}
 	\cvtext{
 		\textbf{\Huge{\textcolor{accentcol}{#1}}}\\[-4pt]
-		 
+
 	}
 }
 
@@ -312,7 +317,7 @@ $endif$
 	\vspace{16pt}
 	\cvtext{
 		\textbf{\huge{\textcolor{darkcol}{#1}}}\\[-4pt]
-		 
+
 	}
 }
 %----------------------------------------------------------------------------------------
@@ -327,7 +332,7 @@ $endif$
 	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
  		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
-	
+
 	\hspace{4pt}
 	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
 		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
@@ -352,7 +357,7 @@ $endif$
 % param 6: technologies include (optional)
 % param 7: achievements (optional)
 \newcommand{\cvevent}[4] {
-	
+
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
@@ -360,7 +365,7 @@ $endif$
 	 		\textcolor{black}{\textbf{#2}} & \colorbox{accentcol}{\makebox[0.32\mpwidth]{\textcolor{white}{\textbf{#1}}}} \\
 			\textcolor{maincol}{#3} & \\
 		\end{tabular*}\\[8pt]
-	
+
 		\ifthenelse{\isempty{#4}}{}{
 			\cvtext{#4}\\
 		}
@@ -374,7 +379,7 @@ $endif$
 	 		\textcolor{black}{\textbf{#1}} & \\
 			\textcolor{maincol}{#2} & \\
 		\end{tabular*}\\[4pt]
-	
+
 		\ifthenelse{\isempty{#3}}{}{
 			\cvtext{#3}\\
 		}
@@ -418,7 +423,7 @@ $endif$
 }
 
 
-% HEADER AND FOOOTER 
+% HEADER AND FOOOTER
 %====================================
 \newcommand\Header[1]{%
 \begin{tikzpicture}[remember picture,overlay]
@@ -440,7 +445,7 @@ $endif$
   (current page.south east) -- (current page.south west) --
   ([yshift=-80pt]current page.south east|-current page text area.south east) --
   ([yshift=-80pt,xshift=-6cm]current page.south|-current page text area.south) --
-  ([xshift=-2.5cm,yshift=-10pt]current page.south|-current page text area.south) --	
+  ([xshift=-2.5cm,yshift=-10pt]current page.south|-current page text area.south) --
   ([yshift=-10pt]current page.south east|-current page text area.south east) -- cycle;
 \node[yshift=0.32cm,xshift=9cm] at (current page.south) {\fontsize{10}{10}\selectfont \textbf{\thepage}};
 \end{tikzpicture}%

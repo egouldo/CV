@@ -1,12 +1,15 @@
 ---
 title: Untitled
+filters:
+  - multibib
+validate-yaml: false #must be turned off to use multibib
 format:
-  modern2-cv-pdf: 
-    header-includes:  
+  modern2-cv-pdf:
+    header-includes:
       - \providecommand{\tightlist}{%\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 author: Elliot Gould
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
-cvcolor: 
+cvcolor:
   main: "005487"
   accent: "385438"
 jobtitle: they/them, he/him
@@ -73,8 +76,11 @@ sidebar:
           inst: "Center for Open Science"
           time: "2020"
           details: "Preregistration Templates for Model-Based Research."
-execute: 
+execute:
   echo: false
+filters:
+  - spellcheck
+spellcheck-lang: en
 ---
 
 ```{r}
@@ -86,7 +92,7 @@ cvevents <- function(tbl, when, what, where, descr) {
     command_start <- "\\cvevent"
     tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
     res <- paste0(
-        command_start, "{", tbl[[when]], "}", 
+        command_start, "{", tbl[[when]], "}",
         "{", tbl[[what]], "}",
         "{", tbl[[where]], "}",
         "{", tbl[[descr]], "}"
@@ -111,23 +117,23 @@ library(purrr)
 
 cvteaching <- function(tbl, role, subject, years, where){
   command_start <- "\\cvevent"
-  
-  tbl_reshaped <- tbl %>%  
+
+  tbl_reshaped <- tbl %>%
     reframe(years = flatten_dbl(years),
-               .by = c(role, subject, where)) %>% 
-    mutate(when = glue::glue(min(years), max(years), .sep = " - "), 
-           .by = role, where) %>% 
-    reframe(years = paste0(years, collapse = ", "), 
+               .by = c(role, subject, where)) %>%
+    mutate(when = glue::glue(min(years), max(years), .sep = " - "),
+           .by = role, where) %>%
+    reframe(years = paste0(years, collapse = ", "),
             .by = c(role, when, subject, where))
-  
-  tbl_items <- 
-    tbl_reshaped %>% 
-    reframe(items = glue::glue("\\item [{subject}] {years}") %>% 
+
+  tbl_items <-
+    tbl_reshaped %>%
+    reframe(items = glue::glue("\\item [{subject}] {years}") %>%
               glue::glue_collapse(sep = "") %>%
-              paste("\\begin{description}[font=$\\bullet$~\\scshape\\color{maincol!50!black}]", ., "\\end{description}", 
-                    sep = ""), 
-            .by = "role") 
-  
+              paste("\\begin{description}[font=$\\bullet$~\\scshape\\color{maincol!50!black}]", ., "\\end{description}",
+                    sep = ""),
+            .by = "role")
+
   res <- paste0(
         command_start, "{", pluck(tbl_reshaped, "when", unique), "}",
         "{", pluck(tbl_reshaped, role, unique), "}",
@@ -154,9 +160,9 @@ tibble::tribble(
     "Systematising Confidence in Open Research and Evidence (SCORE) is a Research Program initiated by the Defense Advanced Research Projects Agency (DARPA) that aimed to develop and deploy automated tools to assign 'confidence scores' to Social and Behavioural research results and claims in light of recent evidence about the 'Replication Crisis' besetting Science. In this role, I lead a small team within the repliCATS project team to build data analysis software and infrastructure to manage and deliver data products to internal teams and external partners. Research components of the role include modelling to investigate predictors of replication success.",
     "Research Assistant, Various Roles", "School of BioSciences, School of Geography\nUniversity of Melbourne", "2015 - Present", "I contributed to various plant ecology and Structured Decision Making research projects for the National Environmental Science Programme, Threatened Species Recovery Hub, including: data analysis and visualisations, building shiny apps, model building and testing, report writing."
 ) |>
-    cvevents(when = "dates", 
-             what = "role", 
-             where = "institution", 
+    cvevents(when = "dates",
+             what = "role",
+             where = "institution",
              descr = "details")
 ```
 
@@ -177,9 +183,9 @@ tibble::tribble(
     "Guest Lecturer", "Environmental Risk Assessment", c(2024, 2025), "University of Melbourne",
     "Guest Lecturer", "Biometry", c(2023), "University of Melbourne",
     "Guest Lecturer", "Critical Thinking with Data", c(2021), "University of Melbourne",
-)  %>%  cvteaching(role = "role", 
-                   subject = "subject", 
-                   years = "years", 
+)  %>%  cvteaching(role = "role",
+                   subject = "subject",
+                   years = "years",
                    where = "where")
 ```
 
@@ -193,7 +199,7 @@ tibble::tribble(
   ~award, ~items, ~institution,
   "Science Abroad Travelling Scholarships, 2023",
     'This scholarship supports PhD students in the Faculty of Science undertaking travel to attend conferences, fieldwork, etc. as part of a Study Away request. Awarded AUD\\$2000.', "University of Melbourne, Faculty of Science, School of Ecosystem and Forest Sciences",
-  "Metascience 2023 travel award", 
+  "Metascience 2023 travel award",
     "USD\\$300  travel award to attend the Metascience 2023 conference.", "Metascience Conference 2023, Washington D.C.", "AIMOS top-up scholarship, 2022", "AIMOS will award up to four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
   "Research Excellence Award for Interdisciplinary Research (Group Award), 2022",
     "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne",
@@ -211,7 +217,7 @@ tibble::tribble(
 
 \vspace{2mm}
 
-Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M., Bourne, M., Butt, N., Byrne, M., Duncan, D. H., Gorrod, E., Gosper, C. R., Jordan, R., McIntyre, S., Moore, J. L., Nerenberg, S., Pulsford, S., Richards, A. E., Rogers, D. J., ..., Vesk, P. A. (2024). A structured approach for building multi‐community State and Transition Models to support conservation planning. *Journal of Applied Ecology*, 61(9), 2294–2307. [doi.org/10.1111/1365-2664.14718](https://doi.org/10.1111/1365-2664.14718) 
+Good, M. K., Rumpff, L., Fraser, H., **Gould, E.**, Jones, C. S., Prober, S. M., Bourne, M., Butt, N., Byrne, M., Duncan, D. H., Gorrod, E., Gosper, C. R., Jordan, R., McIntyre, S., Moore, J. L., Nerenberg, S., Pulsford, S., Richards, A. E., Rogers, D. J., ..., Vesk, P. A. (2024). A structured approach for building multi‐community State and Transition Models to support conservation planning. *Journal of Applied Ecology*, 61(9), 2294–2307. [doi.org/10.1111/1365-2664.14718](https://doi.org/10.1111/1365-2664.14718)
 
 \vspace{2mm}
 
@@ -219,23 +225,23 @@ Nakagawa, S., Ivimey-Cook, E. R., Grainger, M. J., O’Dea, R. E., Burke, S., Dr
 
 \vspace{2mm}
 
-Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., **Gould, E.**, Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R., Sánchez, A., Silva, I., & Windecker, S. M. (2023). Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. *Journal of Evolutionary Biology*. [doi.org/10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230) 
+Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., **Gould, E.**, Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R., Sánchez, A., Silva, I., & Windecker, S. M. (2023). Implementing code review in the scientific workflow: Insights from ecology and evolutionary biology. *Journal of Evolutionary Biology*. [doi.org/10.1111/jeb.14230](https://doi.org/10.1111/jeb.14230)
 
 \vspace{2mm}
 
-Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, J., Wilson, J., Vesk, P. A., & Rumpff, L. (2023). What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects. *Ecological Applications*, 33(1), e2728. [doi.org/10.1002/eap.2728](https://doi.org/10.1002/eap.2728) 
+Jones, C. S., Thomas, F. M., Michael, D. R., Fraser, H., **Gould, E.**, Begley, J., Wilson, J., Vesk, P. A., & Rumpff, L. (2023). What state of the world are we in? Targeted monitoring to detect transitions in vegetation restoration projects. *Ecological Applications*, 33(1), e2728. [doi.org/10.1002/eap.2728](https://doi.org/10.1002/eap.2728)
 
 \vspace{2mm}
- 
+
 Wintle, B. C., Smith, E. T., Bush, M., Mody, F., Wilkinson, D. P., Hanea, A. M., **Gould, E.**, ..., Fidler, F. (2023). Predicting and reasoning about replicability using structured groups. Royal Society Open Science, 10(6). [doi.org/10.1098/rsos.221553](https://doi.org/10.1098/rsos.221553)
 
 \vspace{2mm}
 
-Fraser, H., Bush, M., Wintle, B. C., Mody, F., Smith, E. T., Hanea, A. M., **Gould, E.**, Hemming, V., Hamilton, D. G., Rumpff, L., Wilkinson, D. P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C. T., Head, A., Ross, M., Groenewegen, R., ..., Fidler, F. (2023). Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process. *PLOS ONE*, 18(1), e0274429. [doi.org/10.1371/journal.pone.0274429](https://doi.org/10.1371/journal.pone.0274429) 
+Fraser, H., Bush, M., Wintle, B. C., Mody, F., Smith, E. T., Hanea, A. M., **Gould, E.**, Hemming, V., Hamilton, D. G., Rumpff, L., Wilkinson, D. P., Pearson, R., Singleton Thorn, F., Ashton, R., Willcox, A., Gray, C. T., Head, A., Ross, M., Groenewegen, R., ..., Fidler, F. (2023). Predicting reliability through structured expert elicitation with the repliCATS (Collaborative Assessments for Trustworthy Science) process. *PLOS ONE*, 18(1), e0274429. [doi.org/10.1371/journal.pone.0274429](https://doi.org/10.1371/journal.pone.0274429)
 
 \vspace{2mm}
 
-O’Dea, R. E., Parker, T. H., Chee, Y. E., Culina, A., Drobniak, S. M., Duncan, D. H., Fidler, F., **Gould, E.**, Ihle, M., Kelly, C. D., Lagisz, M., Roche, D. G., Sánchez-Tójar, A., Wilkinson, D. P., Wintle, B. C., & Nakagawa, S. (2021). Towards open, reliable, and transparent ecology and evolutionary biology. *BMC Biology*, 19(1). [doi.org/10.1186/s12915-021-01006-3](https://doi.org/10.1186/s12915-021-01006-3) 
+O’Dea, R. E., Parker, T. H., Chee, Y. E., Culina, A., Drobniak, S. M., Duncan, D. H., Fidler, F., **Gould, E.**, Ihle, M., Kelly, C. D., Lagisz, M., Roche, D. G., Sánchez-Tójar, A., Wilkinson, D. P., Wintle, B. C., & Nakagawa, S. (2021). Towards open, reliable, and transparent ecology and evolutionary biology. *BMC Biology*, 19(1). [doi.org/10.1186/s12915-021-01006-3](https://doi.org/10.1186/s12915-021-01006-3)
 
 \vspace{2mm}
 
@@ -243,4 +249,4 @@ Hanea, A. M., Wilkinson, D. P., McBride, M., Lyon, A., Van Ravenzwaaij, D., Sing
 
 \vspace{2mm}
 
-Good, M., Fraser, H., **Gould, E.**, Vesk, P., Rumpff, L., 2021. A practical guide for conservation planning using the General Ecosystem Model for Southern Australian Woodlands. *NESP Threatened Sprecies Recovery Hub Project 7.2*, Brisbane. 
+Good, M., Fraser, H., **Gould, E.**, Vesk, P., Rumpff, L., 2021. A practical guide for conservation planning using the General Ecosystem Model for Southern Australian Woodlands. *NESP Threatened Sprecies Recovery Hub Project 7.2*, Brisbane.

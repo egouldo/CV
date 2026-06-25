@@ -3,6 +3,7 @@ title: "Postdoctoral Fellow, Contest Point No. 9"
 colorlinks: true
 format:
   modern2-cv-pdf:
+    keep-md: true
     colorlinks: true
     linkcolor: blue
     header-includes:
@@ -17,7 +18,6 @@ sidebar:
   bullets:
     - Tutor / Lecturer
     - Research Assistant
-    - Tutor / Demonstrator
   sections:
     - name: Contact
       items:
@@ -51,31 +51,9 @@ sidebar:
           inst: "University of Melbourne"
           time: "2005 - 2011"
           details: "Major in Indonesian."
-    - name: Service
-      items:
-        - text: "Peer-review"
-          details: "Ecology \\& ecolution, F1000Research, Journal of Evolutionary Biology, Nature ecology \\& evolution, PCI Ecology, PloS one, Royal Society Proc. B"
-          time: "2022 - Present"
-          inst: "Condcuted between 2 - 4 reviews per year."
-        - text: "Preregistration Template Working Group Member"
-          inst: "Centre for Open Science"
-          time: "2023 - Present"
-          details: "The Preregistration Template Working Group seeks to: 1. Establish criteria to evaluate the suitability of new preregistration templates for inclusion in the Open Science Framework (OSF); 2. Develop a procedure by which community creators of preregistration templates can put templates forward for inclusion in OSF; 3. Advise and inform COS on issues related to preregistration implementation in OSF."
-        - text: "Founding Member, Secretary / Treasurer"
-          inst: "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology (SORTEE)"
-          time: "2020 - 2023"
-          details: "SORTEE is a service organization which brings together researchers working to improve reliability and transparency through cultural and institutional changes in ecology, evolutionary biology, and related fields broadly defined."
-    - name: "Media \\& Outreach"
-      items:
-        - icon: link
-          text: "Fraser, H. S., **Gould, E.**, & Parker, T. H. (2023, October 30). Two questions, hundreds of scientists, no easy answers: How small differences in data analysis make huge differences in results. The Conversation."
-          href: https://theconversation.com/two-questions-hundreds-of-scientists-no-easy-answers-how-small-differences-in-data-analysis-make-huge-differences-in-results-216177?utm_source=clipboard&utm_medium=bylinecopy_url_button
-        - icon: link
-          text: "Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. October, 2023."
-          href: https://doi.org/10.1038/d41586-023-03177-1
     - name: "Workshops \\& Talks"
       items:
-        - text: "Invited Speaker and Panellist: Data Bites"
+        - text: "Invited Speaker and Panelist: Data Bites"
           inst: "Melbourne Centre for Data Science"
           time: "2024"
           details: "Reproducibility in Practice: Modelling in Ecology, Evolutionary Biology and Conservation Science."
@@ -94,7 +72,7 @@ sidebar:
     - name: "Software"
       items:
         - icon: r-project
-          text: "aggreCAT: Mathematically Aggregating Expert Judgments (v1.1.0)."
+          text: "aggreCAT: Mathematically Aggregating Expert Judgments."
           href: https://doi.org/10.5281/zenodo.20035624
         - icon: github
           text: "EcoConsModPreReg Format: A Quarto Template for Adaptive Preregistration of Ecological Models."
@@ -102,6 +80,32 @@ sidebar:
         - icon: r-project
           text: "ManyEcoEvo: an R package for analysing many-analyst style data."
           href: "https://doi.org/10.5281/zenodo.13690949"
+    - name: "Media \\& Outreach"
+      items:
+        - icon: link
+          text: "Wilkinson, D.P., **Gould, E.** (2026, June 23) Introducing {aggreCAT}: Mathematical aggregation of expert judgments. R Consortium."
+          href: https://r-consortium.org/posts/introducing-aggrecat-mathematical-aggregation-expert-judgements/
+        - icon: link
+          text: "Fraser, H.S., **Gould, E.**, & Parker, T.H. (2023, October 30). Two questions, hundreds of scientists, no easy answers: How small differences in data analysis make huge differences in results. The Conversation."
+          href: https://theconversation.com/two-questions-hundreds-of-scientists-no-easy-answers-how-small-differences-in-data-analysis-make-huge-differences-in-results-216177?utm_source=clipboard&utm_medium=bylinecopy_url_button
+        - icon: link
+          text: "Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. October, 2023."
+          href: https://doi.org/10.1038/d41586-023-03177-1
+    - name: "Referees"
+      items:
+        - time: "Referee 1"
+          text: "Prof. Fiona Fidler"
+          inst: "Associate Dean, Research. University of Melbourne."
+          details: "fidlerfm@unimelb.edu.au"
+        - time: "Referee 2"
+          text: "Prof. Tim Parker"
+          inst: "Professor of Biology. Whitman College."
+          details: "parkerth@whitman.edu"
+        - time: "Referee 3"
+          text: "Dr. David Wilkinson"
+          inst: "Research Fellow in Quantitative Ecology. University of Melbourne."
+          details: "dwilkinson@unimelb.edu.au"
+
 execute:
   echo: false
 ---
@@ -169,7 +173,7 @@ cvteaching <- function(tbl, role, subject, years, where){
 
 # Summary
 
-Elliot Gould is a PhD candidate at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Elliot has an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grassy woodlands & grasslands of the Victorian Volcanic Plains).
+Elliot Gould has finished a PhD at the School of Agriculture, Food and Ecosystem Sciences, and a Quantitative Research Assistant on the [repliCATS project](replicats.research.unimelb.edu.au/) at the School of History and Philosophical Studies, University of Melbourne. Their PhD investigates the transparency and reproducibility of ecological models in applied ecology and conservation decision-making. Elliot's research seeks to use data science techniques to advance the open-science movement by improving transparency and reproducibility, focussing on ecology and conservation Science. Elliot has an enthusiasm for teaching and skill-sharing, particularly with regard to building a strong community of practice in emerging open-science methodology and computational biology within ecology and conservation. Other research interests include decision-theory, Structured Decision Making, and plant ecology (especially grassy woodlands & grasslands of the Victorian Volcanic Plains).
 
 # Research Experience
 
@@ -233,7 +237,7 @@ tibble::tribble(
   "One of four top-up scholarships per year to PhD or Masters students working on a meta-research project.", "Association for Interdisciplinary Metaresearch and Open Science (AIMOS)",
   "Research Excellence Award for Interdisciplinary Research (Group Award), 2022",
     "Nominees will have been collaborators in interdisciplinary research of outstanding influence, that is, the establishment of new, or advancing of existing, collaborations and programs that draw on multiple disciplines typically involving multiple faculties or schools.", "University of Melbourne",
-  "Melbourne Centre of Data Science Doctral Academy Fellow, 2021",
+  "Melbourne Centre of Data Science Doctoral Academy Fellow, 2021",
     "The MCDS Doctoral Academy aims to bring together a campus wide multi-disciplinary cohort of PhD students (MCDS Doctoral Academy Fellows) to share their research, domain challenges and thoughts around the use, implementation and application of data science in their fields.", "Melbourne Centre for Data Science, University of Melbourne",
   "Australian Government Research Training Program (RTP) Scholarship, 2017",
     "Awarded to high-achieving students undertaking graduate research at the University of Melbourne.", "The University of Melbourne"
